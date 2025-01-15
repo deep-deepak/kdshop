@@ -40,3 +40,28 @@ a {
     color-scheme: dark;
   }
 }
+
+.ms-auto.navbar-nav {
+  color: white !important;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.nav-dropdown.nav-item.dropdown a {
+  color: white;
+}
+
+div#basic-navbar-nav a {
+  margin-right: 20px;
+}
+
+.about_heading {
+  color: #000000;
+  font-family: "Oswald", Sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.125em;
+  letter-spacing: 2.4px;
+}
