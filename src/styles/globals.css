@@ -19,7 +19,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Oswald", Sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -64,4 +64,79 @@ div#basic-navbar-nav a {
   text-transform: uppercase;
   line-height: 1.125em;
   letter-spacing: 2.4px;
+}
+
+h3.text-white.mb-0.about_heading3 {
+  bottom: 80px !important;
+  position: relative;
+  text-align: center;
+  font-weight: 800;
+  box-shadow: 0px 9px 13px 0px rgba(0, 0, 0, 0.09)
+}
+
+h3.about_heading3:hover {
+  bottom: 80px !important;
+  position: relative;
+  text-align: center;
+  color: #EB0008 !important;
+  font-weight: 800;
+  box-shadow: 0px 9px 13px 0px rgba(0, 0, 0, 0.09)
+}
+
+button.about_us_btn {
+  width: 200px;
+  height: 60px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  color: #EB0008;
+  border: 1px solid #EB0008
+}
+
+button.about_us_btn:hover {
+  width: 200px;
+  height: 60px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  color: white;
+  border: 1px solid #EB0008;
+  background-color: #EB0008;
+}
+
+h1.product_heading {
+  color: #000000;
+  font-family: "Oswald", Sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.125em;
+  letter-spacing: 2.4px;
+}
+
+h3.gallery_heading {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Oswald", Sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.65em;
+  letter-spacing: 1.2px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+p.gallery_desc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0px;
+  text-align: inherit;
 }

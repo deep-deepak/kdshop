@@ -12,20 +12,20 @@ const AboutSection = () => {
         {
             id: 2,
             title: 'EDUCATION',
-            image: '/path-to-education-image.jpg', // Replace with actual image path
+            image: '/images/about2.jpg', // Replace with actual image path
             bgPosition: 'center',
         },
         {
             id: 3,
             title: 'RETAIL',
-            image: '/path-to-retail-image.jpg', // Replace with actual image path
+            image: '/images/about3.jpg', // Replace with actual image path
             bgPosition: 'center',
         },
         {
             id: 4,
             title: 'RESIDENTIAL',
-            image: '/path-to-residential-image.jpg', // Replace with actual image path
-            bgPosition: 'center',
+            image: '/images/about4.jpg', // Replace with actual image path
+            bgPosition: 'center'
         },
     ];
 
@@ -65,21 +65,20 @@ const AboutSection = () => {
                         <div
                             className="service-card position-relative"
                             style={{
-                                height: '400px',
+                                height: '500px',
                                 backgroundImage: `url(${service.image})`,
                                 backgroundSize: 'cover',
                                 backgroundPosition: service.bgPosition,
                                 cursor: 'pointer',
                                 transition: 'transform 0.3s ease',
+                                boxShadow: "0px 9px 13px 0px rgba(0, 0, 0, 0.09)"
                             }}
                         >
                             <div
                                 className="service-overlay position-absolute bottom-0 start-0 w-100 p-3"
-                                style={{
-                                    background: 'rgba(0, 0, 0, 0.7)',
-                                }}
+
                             >
-                                <h3 className="text-white mb-0">{service.title}</h3>
+                                <h3 className="text-white mb-0 about_heading3">{service.title}</h3>
                             </div>
                         </div>
                     </Col>

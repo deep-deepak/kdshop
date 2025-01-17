@@ -6,6 +6,9 @@ import Seo from "@/common/Seo";
 import Layout from "@/layout/Layout";
 import HeroSection from "@/landingpage/HeroSection";
 import AboutSection from "@/landingpage/About";
+import ExpertiseSection from "@/landingpage/Experties";
+import ProductsSection from "@/landingpage/ProductSection";
+import ProjectGallery from "@/landingpage/ProjectGallery ";
 
 
 
@@ -16,6 +19,9 @@ export default function Home() {
         <Seo title={"Home"} descrption={"Home page"} />
         <HeroSection />
         <AboutSection />
+        <ExpertiseSection />
+        <ProductsSection />
+        <ProjectGallery />
       </Layout>
 
     </>
