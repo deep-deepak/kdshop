@@ -1,77 +1,72 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Header = () => {
     const [activeLink, setActiveLink] = useState('home');
+    const [isExpanded, setIsExpanded] = useState(false);
 
     const navItems = [
-        { id: 'home', label: 'HOME' },
-        { id: 'about', label: 'ABOUT' },
+        { id: 'home', label: 'HOME', path: '/' },
+        { id: 'about', label: 'ABOUT', path: '/about' },
         {
-            id: 'products',
-            label: 'PRODUCTS',
+            id: 'services',
+            label: 'SERVICES',
             dropdown: [
-                'Windows',
-                'Doors',
-                'Curtain Walling',
-                'Glazing Systems',
-                'Architectural Panels'
+                {
+                    category: 'Shop Fronts',
+                    items: [
+                        { label: 'ALUMINIUM SHOP FRONTS', path: '/shop-fronts-aluminium' },
+                        { label: 'GLASS SHOP FRONTS', path: '/shop-fronts-glass' },
+                        { label: 'TIMBER SHOP FRONTS', path: '/shop-fronts-timber' },
+                        { label: 'AUTOMATIC DOORS', path: '/shop-fronts-automatic-doors' },
+                    ]
+                },
+                {
+                    category: 'Shutters',
+                    items: [
+                        { label: 'PERFORATED ROLLER SHUTTERS', path: '/shutters-perforated' },
+                        { label: 'PUNCHED ROLLER SHUTTERS', path: '/shutters-punched' },
+                        { label: 'GRILLE ROLLER SHUTTERS', path: '/shutters-grille' },
+                    ]
+                },
+                {
+                    category: 'Other Services',
+                    items: [
+                        { label: 'CURTAIN WALL SYSTEM', path: '/curtain-wall' },
+                        { label: 'WINDOWS & DOORS', path: '/windows-doors' },
+                        { label: 'EMERGENCY GLASS REPLACEMENT', path: '/emergency-glass' },
+                        { label: 'PROTECTION SCREEN', path: '/protection-screen' },
+                    ]
+                }
             ]
         },
-        {
-            id: 'sectors',
-            label: 'SECTORS',
-            dropdown: [
-                'Commercial',
-                'Residential',
-                'Education',
-                'Healthcare',
-                'Industrial'
-            ]
-        },
-        { id: 'partners', label: 'PARTNERS' },
-        {
-            id: 'gallery',
-            label: 'GALLERY',
-            dropdown: [
-                'Project Portfolio',
-                'Case Studies',
-                'Installation Photos',
-                'Product Showcase'
-            ]
-        },
-        { id: 'contact', label: 'CONTACT' }
+        { id: 'contact', label: 'CONTACT', path: '/contact' }
     ];
 
     const handleNavClick = (linkId) => {
         setActiveLink(linkId);
+        setIsExpanded(false);
     };
 
     return (
         <Navbar
             expand="lg"
             variant="dark"
-            style={{
-                backgroundColor: '#222a2e',
-                color: "white",
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                right: 0,
-                zIndex: 1030,
-                opacity: 0.7
-            }}
-            className="py-3"
+            expanded={isExpanded}
+            onToggle={(expanded) => setIsExpanded(expanded)}
+            className="py-2 py-lg-3 navbar-custom"
         >
             <Container>
-                <Navbar.Brand
-                    href="#home"
-                    className="d-flex align-items-center"
-                    onClick={() => handleNavClick('home')}
-                >
-                    Logo
-                </Navbar.Brand>
+                <Link href="/" passHref legacyBehavior>
+                    <Navbar.Brand
+                        className="d-flex align-items-center"
+                        onClick={() => handleNavClick('home')}
+                    >
+                        Logo
+                    </Navbar.Brand>
+                </Link>
 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -82,78 +77,148 @@ const Header = () => {
                                     key={item.id}
                                     title={item.label}
                                     id={`nav-dropdown-${item.id}`}
-                                    style={{
-                                        color: activeLink === item.id ? '#dc3545' : 'white',
-                                    }}
                                     className={`nav-dropdown ${activeLink === item.id ? 'active' : ''}`}
-                                    onSelect={() => handleNavClick(item.id)}
                                 >
-                                    {item.dropdown.map((dropItem, index) => (
-                                        <NavDropdown.Item
-                                            key={index}
-                                            href={`#${item.id}-${index}`}
-                                            style={{ color: 'white' }}
-                                            className="dropdown-item"
-                                            onMouseEnter={(e) => e.target.style.backgroundColor = '#494f54'}
-                                            onMouseLeave={(e) => e.target.style.backgroundColor = '#343a40'}
-                                        >
-                                            {dropItem}
-                                        </NavDropdown.Item>
+                                    {item.dropdown.map((category, idx) => (
+                                        <div key={idx} className="dropdown-category">
+                                            <div className="dropdown-category-title">{category.category}</div>
+                                            {category.items.map((dropItem, index) => (
+                                                <Link
+                                                    key={index}
+                                                    href={dropItem.path}
+                                                    passHref
+                                                    legacyBehavior
+                                                >
+                                                    <NavDropdown.Item
+                                                        onClick={() => handleNavClick(item.id)}
+                                                        className="dropdown-item-custom"
+                                                    >
+                                                        {dropItem.label}
+                                                    </NavDropdown.Item>
+                                                </Link>
+                                            ))}
+                                            {idx < item.dropdown.length - 1 && <NavDropdown.Divider />}
+                                        </div>
                                     ))}
                                 </NavDropdown>
                             ) : (
-                                <Nav.Link
+                                <Link
                                     key={item.id}
-                                    href={`#${item.id}`}
-                                    className={activeLink === item.id ? 'active' : ''}
-                                    style={{
-                                        color: activeLink === item.id ? '#dc3545' : 'white',
-                                        transition: 'color 0.3s ease'
-                                    }}
-                                    onClick={() => handleNavClick(item.id)}
-                                    onMouseEnter={(e) => {
-                                        if (activeLink !== item.id) {
-                                            e.currentTarget.style.color = '#a0aec0';
-                                        }
-                                    }}
-                                    onMouseLeave={(e) => {
-                                        if (activeLink !== item.id) {
-                                            e.currentTarget.style.color = 'white';
-                                        }
-                                    }}
+                                    href={item.path}
+                                    passHref
+                                    legacyBehavior
                                 >
-                                    {item.label}
-                                </Nav.Link>
+                                    <Nav.Link
+                                        className={`nav-link-custom ${activeLink === item.id ? 'active' : ''}`}
+                                        onClick={() => handleNavClick(item.id)}
+                                    >
+                                        {item.label}
+                                    </Nav.Link>
+                                </Link>
                             )
                         ))}
                     </Nav>
                 </Navbar.Collapse>
             </Container>
 
-            <style>
-                {`
-                    .nav-dropdown .dropdown-menu {
-                        background-color: #343a40;
-                        border: 1px solid #494f54;
-                        color: white;
+            <style jsx global>{`
+                .navbar-custom {
+                    background-color: #222a2e;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    z-index: 1030;
+                    opacity: 0.9;
+                    box-shadow: 0 4px 6px rgba(176, 174, 174, 0.5);
+                }
+
+                .nav-link-custom {
+                    color: white !important;
+                    transition: all 0.3s ease;
+                    padding: 0.5rem 1rem;
+                    font-size: 15px;
+                }
+
+                .nav-link-custom:hover,
+                .nav-link-custom.active {
+                    color: #dc3545 !important;
+                    font-size: 16px;
+                }
+
+                .nav-dropdown .dropdown-menu {
+                    background-color: #343a40;
+                    border: 1px solid #494f54;
+                    padding: 0.5rem 0;
+                    margin-top: 0;
+                    min-width: 280px;
+                }
+
+                .dropdown-category {
+                    padding: 0.25rem 0;
+                }
+
+                .dropdown-category-title {
+                    color: #dc3545;
+                    padding: 0.5rem 1.5rem;
+                    font-weight: 600;
+                    font-size: 14px;
+                }
+
+                .dropdown-item-custom {
+                    color: white !important;
+                    padding: 0.5rem 1.5rem 0.5rem 2rem;
+                    transition: all 0.3s ease;
+                    background-color: transparent;
+                    font-size: 14px;
+                }
+
+                .dropdown-item-custom:hover {
+                    background-color: #494f54 !important;
+                    color: #dc3545 !important;
+                    font-size: 15px;
+                }
+
+                .dropdown-divider {
+                    border-top: 1px solid #494f54;
+                    margin: 0.5rem 0;
+                }
+
+                .navbar-toggler {
+                    border-color: rgba(255,255,255,0.5);
+                }
+
+                .navbar-toggler:focus {
+                    box-shadow: none;
+                }
+
+                @media (max-width: 991px) {
+                    .navbar-collapse {
+                        background-color: #222a2e;
+                        padding: 1rem;
+                        margin: 0 -1rem;
                     }
-                    
-                    .nav-dropdown .dropdown-item {
-                        color: white !important;
+
+                    .nav-link-custom {
+                        padding: 0.75rem 0;
                     }
-                    
-                    .nav-dropdown .dropdown-item:hover {
-                        background-color: #494f54;
-                        color: #dc3545 !important;
-                        font-size: 17px;
+
+                    .dropdown-menu {
+                        background-color: transparent !important;
+                        border: none !important;
+                        padding-left: 1rem !important;
                     }
-                    
-                    .nav-dropdown.active .nav-link {
-                        color: #dc3545 !important;
-                        font-size: 17px;
+
+                    .dropdown-item-custom {
+                        padding: 0.5rem 1rem;
                     }
-                `}
-            </style>
+
+                    .dropdown-category-title {
+                        padding: 0.5rem 1rem;
+                        margin-top: 0.5rem;
+                    }
+                }
+            `}</style>
         </Navbar>
     );
 };

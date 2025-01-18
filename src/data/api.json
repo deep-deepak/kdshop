@@ -1,0 +1,44 @@
+{
+    "shopfrontstimber": {
+        "heroSection": {
+            "image": "/images/test.jpg",
+            "title": "Fire-Resistant Solutions for Residential Buildings",
+            "description": [
+                "Advanced protection systems designed specifically for homes and apartment buildings.",
+                "Meeting all residential safety standards while maintaining aesthetic appeal."
+            ]
+        },
+        "gallerySection": {
+            "title": "Residential Fire Protection Systems",
+            "downloads": [
+                {
+                    "id": 1,
+                    "title": "Residential Brochure",
+                    "link": "#"
+                },
+                {
+                    "id": 2,
+                    "title": "Residential Catalogue",
+                    "link": "#"
+                }
+            ],
+            "gallery": [
+                {
+                    "id": 1,
+                    "image": "/images/test1.jpg",
+                    "alt": "Residential hallway protection"
+                },
+                {
+                    "id": 2,
+                    "image": "/images/test2.jpg",
+                    "alt": "Apartment fire doors"
+                },
+                {
+                    "id": 3,
+                    "image": "/images/test3.jpg",
+                    "alt": "Home safety systems"
+                }
+            ]
+        }
+    }
+}

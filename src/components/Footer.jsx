@@ -3,17 +3,19 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const Footer = () => {
     return (
-        <footer className="bg-dark text-white py-8">
+        <footer className="bg-dark text-white py-5">
             <Container>
-                <Row className="align-items-center">
-
-                    <Col md={6} className="mb-4 mb-lg-0">
-                        <div className="d-flex align-items-center">
+                <Row className="gy-4">
+                    {/* Left Column - Logo and Company Info */}
+                    <Col lg={6}>
+                        <div className="d-flex flex-column flex-sm-row align-items-center align-items-sm-start">
                             {/* Logo */}
-                            <div className="me-3">
+                            <div className="mb-3 mb-sm-0 me-sm-4">
                                 <svg
                                     viewBox="0 0 40 40"
-                                    className="w-10 h-10 text-white"
+                                    width="60"
+                                    height="60"
+                                    className="text-white"
                                     fill="currentColor"
                                 >
                                     <path d="M35 5v30H5V5h30m2-2H3v34h34V3z" />
@@ -21,52 +23,48 @@ const Footer = () => {
                                 </svg>
                             </div>
 
-                            {/* Company Name and Details */}
-                            <div>
-                                <h2 className="text-xl font-bold mb-0">LSF Commercial</h2>
-                                <p className="text-sm text-gray-300 mb-0">Windows • Doors • Curtain Walling</p>
-                                <p className="text-xs text-gray-400 mt-2">
-                                    © 2022 London Shopfitters Ltd T/A LSF Commercial.
+                            {/* Company Info */}
+                            <div className="text-center text-sm-start">
+                                <h2 className="h4 fw-bold mb-2">LSF Commercial</h2>
+                                <p className="text-secondary mb-1">Windows • Doors • Curtain Walling</p>
+                                <p className="small text-secondary mb-0">
+                                    © {new Date().getFullYear()} London Shopfitters Ltd T/A LSF Commercial.
                                 </p>
                             </div>
                         </div>
                     </Col>
 
-                    {/* Quick Links */}
-                    <Col md={6}>
-                        <div className="d-flex flex-column align-items-lg-end">
-                            <h3 className="text-lg font-bold mb-3">QUICK LINKS</h3>
-                            <ul className="list-unstyled">
-                                <li className="mb-2">
-                                    <a href="/about" className="text-white text-decoration-none hover:text-gray-300">
-                                        About Us
-                                    </a>
-                                </li>
-                                <li className="mb-2">
-                                    <a href="/products" className="text-white text-decoration-none hover:text-gray-300">
-                                        Products
-                                    </a>
-                                </li>
-                                <li className="mb-2">
-                                    <a href="/sectors" className="text-white text-decoration-none hover:text-gray-300">
-                                        Sectors
-                                    </a>
-                                </li>
-                                <li className="mb-2">
-                                    <a href="/gallery" className="text-white text-decoration-none hover:text-gray-300">
-                                        Gallery
-                                    </a>
-                                </li>
-                                <li className="mb-2">
-                                    <a href="/privacy" className="text-white text-decoration-none hover:text-gray-300">
-                                        Privacy Policy
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/skips" className="text-white text-decoration-none hover:text-gray-300">
-                                        Skips
-                                    </a>
-                                </li>
+                    {/* Right Column - Quick Links */}
+                    <Col lg={6}>
+                        <div className="d-flex flex-column align-items-center align-items-lg-end">
+                            <h3 className="h5 fw-bold mb-3">QUICK LINKS</h3>
+                            <ul className="list-unstyled text-center text-lg-end mb-0">
+                                {[
+                                    { text: 'About Us', href: '/about' },
+                                    { text: 'Products', href: '/products' },
+                                    { text: 'Sectors', href: '/sectors' },
+                                    { text: 'Gallery', href: '/gallery' },
+                                    { text: 'Privacy Policy', href: '/privacy' },
+                                    { text: 'Skips', href: '/skips' }
+                                ].map((link, index) => (
+                                    <li key={index} className="mb-2 last:mb-0">
+                                        <a
+                                            href={link.href}
+                                            className="text-white text-decoration-none position-relative"
+                                            style={{
+                                                transition: 'color 0.3s ease',
+                                            }}
+                                            onMouseEnter={(e) => {
+                                                e.target.style.color = '#a0a0a0';
+                                            }}
+                                            onMouseLeave={(e) => {
+                                                e.target.style.color = '#ffffff';
+                                            }}
+                                        >
+                                            {link.text}
+                                        </a>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </Col>
