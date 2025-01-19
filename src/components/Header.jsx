@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Image from 'next/image';
+import { useRouter } from 'next/router'; // Import useRouter hook
 
 const Header = () => {
-    const [activeLink, setActiveLink] = useState('home');
     const [isExpanded, setIsExpanded] = useState(false);
+    const router = useRouter(); // Get router object
+    const [activeLink, setActiveLink] = useState("")
 
     const navItems = [
         { id: 'home', label: 'HOME', path: '/' },
@@ -36,7 +39,6 @@ const Header = () => {
                     items: [
                         { label: 'CURTAIN WALL SYSTEM', path: '/curtain-wall' },
                         { label: 'WINDOWS & DOORS', path: '/windows-doors' },
-                        { label: 'EMERGENCY GLASS REPLACEMENT', path: '/emergency-glass' },
                         { label: 'PROTECTION SCREEN', path: '/protection-screen' },
                     ]
                 }
@@ -45,8 +47,19 @@ const Header = () => {
         { id: 'contact', label: 'CONTACT', path: '/contact' }
     ];
 
+    useEffect(() => {
+        // Dynamically set the active link based on the current URL
+        const currentPath = router.pathname;
+        const activeNavItem = navItems.find(item => {
+            // Check if the path of the nav item matches the current route
+            return item.path === currentPath || (item.dropdown && item.dropdown.some(category => category.items.some(dropItem => dropItem.path === currentPath)));
+        });
+        if (activeNavItem) {
+            setActiveLink(activeNavItem.id);
+        }
+    }, [router.pathname]); // Re-run the effect when the route changes
+
     const handleNavClick = (linkId) => {
-        setActiveLink(linkId);
         setIsExpanded(false);
     };
 
@@ -64,7 +77,12 @@ const Header = () => {
                         className="d-flex align-items-center"
                         onClick={() => handleNavClick('home')}
                     >
-                        Logo
+                        <Image
+                            src="/logo.png"
+                            width={220}
+                            height={70}
+                            alt="Logo"
+                        />
                     </Navbar.Brand>
                 </Link>
 
@@ -77,7 +95,7 @@ const Header = () => {
                                     key={item.id}
                                     title={item.label}
                                     id={`nav-dropdown-${item.id}`}
-                                    className={`nav-dropdown ${activeLink === item.id ? 'active' : ''}`}
+                                    className={`nav-dropdown ${router.pathname.startsWith(item.path) ? 'active' : ''}`}
                                 >
                                     {item.dropdown.map((category, idx) => (
                                         <div key={idx} className="dropdown-category">
@@ -91,7 +109,7 @@ const Header = () => {
                                                 >
                                                     <NavDropdown.Item
                                                         onClick={() => handleNavClick(item.id)}
-                                                        className="dropdown-item-custom"
+                                                        className={`dropdown-item-custom ${router.pathname === dropItem.path ? 'active' : ''}`}
                                                     >
                                                         {dropItem.label}
                                                     </NavDropdown.Item>
@@ -109,7 +127,7 @@ const Header = () => {
                                     legacyBehavior
                                 >
                                     <Nav.Link
-                                        className={`nav-link-custom ${activeLink === item.id ? 'active' : ''}`}
+                                        className={`nav-link-custom ${router.pathname === item.path ? 'active' : ''}`}
                                         onClick={() => handleNavClick(item.id)}
                                     >
                                         {item.label}
@@ -173,7 +191,8 @@ const Header = () => {
                     font-size: 14px;
                 }
 
-                .dropdown-item-custom:hover {
+                .dropdown-item-custom:hover,
+                .dropdown-item-custom.active {
                     background-color: #494f54 !important;
                     color: #dc3545 !important;
                     font-size: 15px;

@@ -1,72 +1,111 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { FaFacebook, FaInstagram, FaLinkedin, FaSeedling, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer className="bg-dark text-white py-5">
+        <footer className="bg-dark text-light py-5">
             <Container>
+                {/* Main Footer Content */}
                 <Row className="gy-4">
-                    {/* Left Column - Logo and Company Info */}
-                    <Col lg={6}>
-                        <div className="d-flex flex-column flex-sm-row align-items-center align-items-sm-start">
-                            {/* Logo */}
-                            <div className="mb-3 mb-sm-0 me-sm-4">
-                                <svg
-                                    viewBox="0 0 40 40"
-                                    width="60"
-                                    height="60"
-                                    className="text-white"
-                                    fill="currentColor"
-                                >
-                                    <path d="M35 5v30H5V5h30m2-2H3v34h34V3z" />
-                                    <path d="M10 10h20v2H10zM10 20h20v2H10z" />
-                                </svg>
-                            </div>
-
-                            {/* Company Info */}
-                            <div className="text-center text-sm-start">
-                                <h2 className="h4 fw-bold mb-2">LSF Commercial</h2>
-                                <p className="text-secondary mb-1">Windows • Doors • Curtain Walling</p>
-                                <p className="small text-secondary mb-0">
-                                    © {new Date().getFullYear()} London Shopfitters Ltd T/A LSF Commercial.
-                                </p>
-                            </div>
+                    {/* Logo and Company Info */}
+                    <Col lg={3} md={6}>
+                        <div className="mb-4">
+                            <img
+                                src="logo.png"
+                                alt="Company Logo"
+                                style={{
+                                    width: "300px",
+                                    height: 'auto',
+                                    objectFit: 'contain'
+                                }}
+                            />
+                            <p className="mb-4" style={{ marginTop: "10px" }}>We are dedicated to providing the best services to our customers with quality and innovation at the forefront of everything we do.</p>
+                        </div>
+                        <div className="d-flex gap-3">
+                            <a href="#" className="text-light hover:text-primary transition-colors">
+                                <FaFacebook size={24} />
+                            </a>
+                            <a href="#" className="text-light hover:text-primary transition-colors">
+                                <FaTwitter size={24} />
+                            </a>
+                            <a href="#" className="text-light hover:text-primary transition-colors">
+                                <FaInstagram size={24} />
+                            </a>
+                            <a href="#" className="text-light hover:text-primary transition-colors">
+                                <FaYoutube size={24} />
+                            </a>
                         </div>
                     </Col>
 
-                    {/* Right Column - Quick Links */}
-                    <Col lg={6}>
-                        <div className="d-flex flex-column align-items-center align-items-lg-end">
-                            <h3 className="h5 fw-bold mb-3">QUICK LINKS</h3>
-                            <ul className="list-unstyled text-center text-lg-end mb-0">
-                                {[
-                                    { text: 'About Us', href: '/about' },
-                                    { text: 'Products', href: '/products' },
-                                    { text: 'Sectors', href: '/sectors' },
-                                    { text: 'Gallery', href: '/gallery' },
-                                    { text: 'Privacy Policy', href: '/privacy' },
-                                    { text: 'Skips', href: '/skips' }
-                                ].map((link, index) => (
-                                    <li key={index} className="mb-2 last:mb-0">
-                                        <a
-                                            href={link.href}
-                                            className="text-white text-decoration-none position-relative"
-                                            style={{
-                                                transition: 'color 0.3s ease',
-                                            }}
-                                            onMouseEnter={(e) => {
-                                                e.target.style.color = '#a0a0a0';
-                                            }}
-                                            onMouseLeave={(e) => {
-                                                e.target.style.color = '#ffffff';
-                                            }}
-                                        >
-                                            {link.text}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
+                    {/* Quick Links */}
+                    <Col lg={3} md={6}>
+                        <h5 className="mb-4">Quick Links</h5>
+                        <ul className="list-unstyled">
+                            <li className="mb-2">
+                                <a href="#" className="text-light text-decoration-none hover:text-primary">Home</a>
+                            </li>
+                            <li className="mb-2">
+                                <a href="#" className="text-light text-decoration-none hover:text-primary">About Us</a>
+                            </li>
+                            <li className="mb-2">
+                                <a href="#" className="text-light text-decoration-none hover:text-primary">Services</a>
+                            </li>
+                            <li className="mb-2">
+                                <a href="#" className="text-light text-decoration-none hover:text-primary">Contact</a>
+                            </li>
+                            <li className="mb-2">
+                                <a href="#" className="text-light text-decoration-none hover:text-primary">Blog</a>
+                            </li>
+                        </ul>
+                    </Col>
+
+                    {/* Contact Info */}
+                    <Col lg={3} md={6}>
+                        <h5 className="mb-4">Contact Info</h5>
+                        <ul className="list-unstyled">
+                            <li className="mb-3">
+                                <p className="mb-0">77A longbridg</p>
+                                <p className="mb-0">barking</p>
+                                {/* <p className="mb-0">Postal Code</p> */}
+                            </li>
+                            <li className="mb-3">
+                                <p className="mb-0">Phone: +447407057984</p>
+                            </li>
+                            <li className="mb-3">
+                                <p className="mb-0">Email: kdshopfrontandshutters@gmail.com</p>
+                            </li>
+                        </ul>
+                    </Col>
+                    <Col lg={3} md={6}>
+                        <h5 className="mb-4">Newsletter</h5>
+                        <p className="mb-4">Subscribe to our newsletter for updates and special offers.</p>
+                        <div className="input-group mb-3">
+                            <input
+                                type="email"
+                                className="form-control"
+                                placeholder="Your email"
+                                aria-label="Your email"
+                            />
+                            <button
+                                className="btn btn-primary d-flex align-items-center"
+                                type="button"
+                            >
+                                <FaSeedling size={18} />
+                            </button>
                         </div>
+                    </Col>
+
+
+                </Row>
+
+                {/* Bottom Footer */}
+                <Row className="mt-5">
+                    <Col className="text-center">
+                        <hr className="my-4" />
+                        <p className="mb-0">
+                            © {new Date().getFullYear()} Your Company Name. All rights reserved.
+                        </p>
                     </Col>
                 </Row>
             </Container>

@@ -12,33 +12,38 @@ const Gallery = () => {
         },
         {
             id: 2,
-            url: '/images/gallery1.jpg',
+            url: '/images/home1.jpg',
             alt: 'Modern apartment building',
-            title: 'Modern Architecture'
+            title: 'Modern Architecture',
+            description: "Secure, durable, energy-efficient and attractive, aluminium window systems are designed to meet the needs of your business and are available in a wide range of designs and configurations."
         },
         {
             id: 3,
-            url: '/images/gallery1.jpg',
+            url: '/images/home2.jpg',
             alt: 'Retail storefront',
-            title: 'Retail Design'
+            title: 'Retail Design',
+            description: "A wide range of high quality doors caters for different client needs and commercial building types and purposes. Design options include thermally broken commercial pivot doors, lift and slide designs, and frameless glass doors."
         },
         {
             id: 4,
-            url: '/images/gallery1.jpg',
+            url: '/images/home3.jpg',
             alt: 'Interior design',
-            title: 'Interior Spaces'
+            title: 'Interior Spaces',
+            description: "Fire-resistant aluminium solutions are now available from LSF Commercial. These add an extra layer of security to any structure while also providing weatherproofing, thermal performance, and aesthetic appeal."
         },
         {
             id: 5,
-            url: '/images/gallery1.jpg',
+            url: '/images/home4.jpeg',
             alt: 'Design elements',
-            title: 'Design Details'
+            title: 'Design Details',
+            description: "Attractive, durable, secure and practically-designed, our aluminium shopfronts offer a wide variety of window arrangements to showcase your business."
         },
         {
             id: 6,
-            url: '/images/gallery1.jpg',
+            url: '/images/home5.jpg',
             alt: 'Modern office',
-            title: 'Office Spaces'
+            title: 'Office Spaces',
+            description: "At LSF Commercial we can design and install stunning office spaces which help improve productivity, improve staff well-being and help make your office a space everyone will enjoy."
         }
     ];
 

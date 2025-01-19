@@ -13,6 +13,7 @@ export default function Service() {
 
     const serviceName = currentPath.replace(/[\-/]/g, '');
     const data = serviceData[serviceName];
+    console.log("data", data)
 
     // Fallback in case data is not found
     if (!data) {
@@ -28,7 +29,7 @@ export default function Service() {
             <Seo title={formatString(currentPath)} description={`${formatString(currentPath)} description`} />  {/* Fixed spelling */}
             <PageHeading
                 title={formatString(currentPath)}
-                image={data.heroSection.image}
+                image={data.gallerySection.gallery[1].image}
             />
             <Container className="py-5">
                 <Row className="align-items-center g-4">
@@ -39,6 +40,7 @@ export default function Service() {
                                 src={data.heroSection.image}
                                 alt="Office interior with glass partitions"
                                 className="img-fluid rounded"
+                                style={{ height: "450px", width: "600px" }}
                             />
                         </Card>
                     </Col>
@@ -83,6 +85,7 @@ export default function Service() {
                     {data.gallerySection.gallery.map((item) => (
                         <Col key={item.id} md={4}>
                             <img
+                                style={{ height: "350px", width: "450px" }}
                                 src={item.image}
                                 alt={item.alt}
                                 className="img-fluid rounded shadow-sm w-full object-cover hover:opacity-90 transition-opacity duration-300"
