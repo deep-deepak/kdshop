@@ -55,14 +55,17 @@ const ExpertiseSection = () => {
                 <Col md={6} className="bg-black text-white p-4 p-md-5" style={{ minHeight: '100vh' }}>
                     <div className="d-flex flex-column justify-content-center h-100">
                         <div className="expertise-content" style={{ maxWidth: '600px', margin: '0 auto' }}>
-                            <p className="small mb-3">EXPERTISE</p>
+                            <p className="small mb-3" style={{ color: "#16b943" }} data-aos="slide-up">EXPERTISE</p>
                             <h2 className="display-4 fw-bold mb-4" style={{ marginBottom: "20px" }}>WHY CHOOSE US?</h2>
-                            <div className="red-line mt-3" style={{
-                                width: '50px',
-                                height: '3px',
-                                backgroundColor: 'red'
-                            }}></div>
-                            <p className="mb-5 text-light" style={{ marginTop: "20px" }}>
+                            <div className="red-line mt-3"
+                                data-aos="fade-in"
+                                style={{
+                                    width: '50px',
+                                    height: '3px',
+                                    backgroundColor: '#16b943'
+
+                                }}></div>
+                            <p className="mb-5 text-light" style={{ marginTop: "20px" }} data-aos="slide-up">
                                 Our experts are here to offer you professional and specialised window glazing guidance.
                                 We will be able to supply sophisticated architectural glazing for your project.
                                 For over 40 years, LSF Commercial has been a market leader in the field of architectural glazing in London.
@@ -85,12 +88,12 @@ const ExpertiseSection = () => {
                         className="position-relative h-100 d-flex align-items-center"
                         style={{
                             minHeight: '100vh',
-                            backgroundColor: '#EB0008',
+                            backgroundColor: '#16b943',
                             opacity: 0.9
                         }}
                     >
                         {/* Background Pattern */}
-                        <div className="position-absolute w-100 h-100" style={{ opacity: 0.1 }}>
+                        <div className="position-absolute w-100 h-100" style={{ opacity: 0.1 }} data-aos="slide-up">
                             {[...Array(20)].map((_, i) => (
                                 <div
                                     key={i}
@@ -118,8 +121,8 @@ const ExpertiseSection = () => {
                                     }}
                                 >
                                     <h2 className="display-4 fw-bold mb-4">{slides[activeSlide].title}</h2>
-                                    <h3 className="h2 mb-3">{slides[activeSlide].subtitle}</h3>
-                                    <p className="mb-5" style={{ fontSize: '1.1rem' }}>
+                                    <h3 className="h2 mb-3" data-aos="fade-down">{slides[activeSlide].subtitle}</h3>
+                                    <p className="mb-5" style={{ fontSize: '1.1rem' }} data-aos="slide-up">
                                         {slides[activeSlide].content}
                                     </p>
                                 </div>

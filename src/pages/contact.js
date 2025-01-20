@@ -15,23 +15,23 @@ const ContactForm = () => {
 
                         <div>
                             <h5>Name:</h5>
-                            <p className="mb-0 text-danger">K&DShopfrontandshutters</p>
+                            <p className="mb-0 " style={{ color: "#16b943" }}>K&D Shop front and shutters</p>
                         </div>
                         <br />
                         <div className="mb-4">
                             <h5>Phone:</h5>
-                            <p className="text-danger mb-0">+447407057984</p>
+                            <p className=" mb-0" style={{ color: "#16b943" }}>+44 7407057984</p>
                         </div>
                         <div className="mb-4">
                             <h5>E-mail:</h5>
                             <a href="mailto:sales@londonshopfitters.co.uk"
-                                className="text-danger text-decoration-none">
+                                className=" text-decoration-none" style={{ color: "#16b943" }}>
                                 kdshopfrontandshutters@gmail.com
                             </a>
                         </div>
                         <div className="mb-4">
                             <h5>Address:</h5>
-                            <p className="text-danger mb-0">
+                            <p className=" mb-0" style={{ color: "#16b943" }}>
                                 77A longbridg road,<br />
                                 barking
                             </p>
@@ -87,8 +87,7 @@ const ContactForm = () => {
                             <Button
                                 variant="primary"
                                 type="submit"
-                                className="px-4"
-                                style={{ backgroundColor: '#4285f4', border: 'none' }}
+                                className="px-4 submit_btn"
                             >
                                 SUBMIT
                             </Button>

@@ -5,7 +5,8 @@
             "title": "Modern Aluminium Shopfront Solutions",
             "description": [
                 "High-quality aluminium shopfronts designed for strength and contemporary style.",
-                "Perfect for commercial spaces seeking durability and aesthetic versatility."
+                "Perfect for commercial spaces seeking durability and aesthetic versatility.",
+                "Our aluminium shopfronts are customizable, secure, and eco-friendly, providing the perfect blend of form and function."
             ]
         },
         "gallerySection": {
@@ -14,12 +15,22 @@
                 {
                     "id": 1,
                     "title": "Aluminium Shopfront Brochure",
-                    "link": "#"
+                    "link": "/downloads/aluminium-shopfront-brochure.pdf"
                 },
                 {
                     "id": 2,
                     "title": "Aluminium Shopfront Catalogue",
-                    "link": "#"
+                    "link": "/downloads/aluminium-shopfront-catalogue.pdf"
+                },
+                {
+                    "id": 3,
+                    "title": "Installation Guide for Aluminium Shopfronts",
+                    "link": "/downloads/aluminium-shopfront-installation-guide.pdf"
+                },
+                {
+                    "id": 4,
+                    "title": "Maintenance Manual for Aluminium Shopfronts",
+                    "link": "/downloads/aluminium-shopfront-maintenance-manual.pdf"
                 }
             ],
             "gallery": [
@@ -37,6 +48,21 @@
                     "id": 3,
                     "image": "/images/service4.avif",
                     "alt": "Durable aluminium shopfront"
+                },
+                {
+                    "id": 4,
+                    "image": "/images/service5.avif",
+                    "alt": "Custom-designed aluminium shopfront"
+                },
+                {
+                    "id": 5,
+                    "image": "/images/service6.avif",
+                    "alt": "Elegant aluminium shopfront in a commercial space"
+                },
+                {
+                    "id": 6,
+                    "image": "/images/service7.avif",
+                    "alt": "Minimalist aluminium shopfront design"
                 }
             ]
         }
@@ -47,7 +73,9 @@
             "title": "Stylish Glass Shopfront Solutions",
             "description": [
                 "Elegant glass shopfronts designed to enhance visibility and modern appeal.",
-                "A perfect choice for businesses seeking a sleek and contemporary aesthetic."
+                "A perfect choice for businesses seeking a sleek and contemporary aesthetic.",
+                "Our glass shopfronts are crafted with premium-grade materials, ensuring both durability and aesthetic excellence.",
+                "Customizable solutions tailored to match your brand identity and architectural requirements."
             ]
         },
         "gallerySection": {
@@ -56,12 +84,22 @@
                 {
                     "id": 1,
                     "title": "Glass Shopfront Brochure",
-                    "link": "#"
+                    "link": "/downloads/glass-shopfront-brochure.pdf"
                 },
                 {
                     "id": 2,
                     "title": "Glass Shopfront Catalogue",
-                    "link": "#"
+                    "link": "/downloads/glass-shopfront-catalogue.pdf"
+                },
+                {
+                    "id": 3,
+                    "title": "Glass Shopfront Installation Guide",
+                    "link": "/downloads/glass-shopfront-installation-guide.pdf"
+                },
+                {
+                    "id": 4,
+                    "title": "Glass Shopfront Maintenance Tips",
+                    "link": "/downloads/glass-shopfront-maintenance-tips.pdf"
                 }
             ],
             "gallery": [
@@ -79,6 +117,21 @@
                     "id": 3,
                     "image": "/images/service8.avif",
                     "alt": "Custom glass shopfront solution"
+                },
+                {
+                    "id": 4,
+                    "image": "/images/service9.avif",
+                    "alt": "Frameless glass shopfront design"
+                },
+                {
+                    "id": 5,
+                    "image": "/images/service10.avif",
+                    "alt": "Tempered glass shopfront in a retail space"
+                },
+                {
+                    "id": 6,
+                    "image": "/images/service11.avif",
+                    "alt": "Premium glass shopfront with signage"
                 }
             ]
         }

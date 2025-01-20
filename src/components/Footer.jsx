@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaFacebook, FaInstagram, FaLinkedin, FaSeedling, FaTwitter, FaYoutube } from 'react-icons/fa';
@@ -22,25 +23,22 @@ const Footer = () => {
                             />
                             <p className="mb-4" style={{ marginTop: "10px" }}>We are dedicated to providing the best services to our customers with quality and innovation at the forefront of everything we do.</p>
                         </div>
-                        <div className="d-flex gap-3">
-                            <a href="#" className="text-light hover:text-primary transition-colors">
-                                <FaFacebook size={24} />
-                            </a>
-                            <a href="#" className="text-light hover:text-primary transition-colors">
+                        <div className="d-flex gap-3 social_icon">
+                            <Link href="https://x.com/KDShopfront" target='_blank' className="text-light hover:text-primary transition-colors">
                                 <FaTwitter size={24} />
-                            </a>
-                            <a href="#" className="text-light hover:text-primary transition-colors">
+                            </Link>
+                            <Link href="https://www.instagram.com/kdshopfrontshutters/" target='_blank' className="text-light hover:text-primary transition-colors">
                                 <FaInstagram size={24} />
-                            </a>
-                            <a href="#" className="text-light hover:text-primary transition-colors">
+                            </Link>
+                            <Link href="https://www.youtube.com/channel/UCZsZxPrvAhV7TnzNZD601zA" target='_blank' className="text-light hover:text-primary transition-colors">
                                 <FaYoutube size={24} />
-                            </a>
+                            </Link>
                         </div>
                     </Col>
 
                     {/* Quick Links */}
                     <Col lg={3} md={6}>
-                        <h5 className="mb-4">Quick Links</h5>
+                        <h5 className="mb-4" style={{ color: "#16b943" }}>Quick Links</h5>
                         <ul className="list-unstyled">
                             <li className="mb-2">
                                 <a href="#" className="text-light text-decoration-none hover:text-primary">Home</a>
@@ -62,7 +60,7 @@ const Footer = () => {
 
                     {/* Contact Info */}
                     <Col lg={3} md={6}>
-                        <h5 className="mb-4">Contact Info</h5>
+                        <h5 className="mb-4" style={{ color: "#16b943" }}>Contact Info</h5>
                         <ul className="list-unstyled">
                             <li className="mb-3">
                                 <p className="mb-0">77A longbridg</p>
@@ -70,7 +68,7 @@ const Footer = () => {
                                 {/* <p className="mb-0">Postal Code</p> */}
                             </li>
                             <li className="mb-3">
-                                <p className="mb-0">Phone: +447407057984</p>
+                                <p className="mb-0">Phone: +44 7407057984</p>
                             </li>
                             <li className="mb-3">
                                 <p className="mb-0">Email: kdshopfrontandshutters@gmail.com</p>
@@ -78,7 +76,7 @@ const Footer = () => {
                         </ul>
                     </Col>
                     <Col lg={3} md={6}>
-                        <h5 className="mb-4">Newsletter</h5>
+                        <h5 className="mb-4" style={{ color: "#16b943" }}>Newsletter</h5>
                         <p className="mb-4">Subscribe to our newsletter for updates and special offers.</p>
                         <div className="input-group mb-3">
                             <input
@@ -90,6 +88,7 @@ const Footer = () => {
                             <button
                                 className="btn btn-primary d-flex align-items-center"
                                 type="button"
+                                style={{ background: "#16b943", border: "1px solid #16b943" }}
                             >
                                 <FaSeedling size={18} />
                             </button>
@@ -104,7 +103,7 @@ const Footer = () => {
                     <Col className="text-center">
                         <hr className="my-4" />
                         <p className="mb-0">
-                            © {new Date().getFullYear()} Your Company Name. All rights reserved.
+                            © {new Date().getFullYear()} k&d shop front. All rights reserved.
                         </p>
                     </Col>
                 </Row>

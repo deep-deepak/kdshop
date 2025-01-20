@@ -55,6 +55,7 @@ const Gallery = () => {
                 {images.map((image) => (
                     <Col key={image.id} xs={12} md={6} lg={4}>
                         <div
+                            data-aos="zoom-in"
                             className="position-relative overflow-hidden rounded shadow-sm"
                             onMouseEnter={() => setHoveredId(image.id)}
                             onMouseLeave={() => setHoveredId(null)}
@@ -81,6 +82,7 @@ const Gallery = () => {
                                     color: 'white',
                                     textAlign: 'center'
                                 }}
+                                data-aos="slide-up"
                             >
                                 <h3 className="h5 mb-2 gallery_heading">{image.title}</h3>
                                 {image.description && (

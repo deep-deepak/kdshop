@@ -14,6 +14,7 @@ export default function About() {
                 <Row className="justify-content-center align-items-center mx-4 mx-md-5 gy-4">
                     <Col lg={6} className="pe-lg-4">
                         <div
+                            data-aos="zoom-in"
                             className="position-relative"
                             style={{
                                 boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
@@ -30,17 +31,18 @@ export default function About() {
                                     borderRadius: '4px',
                                     display: 'block'
                                 }}
+                                data-aos="fade-right"
                             />
                         </div>
                     </Col>
 
                     <Col lg={6} className="ps-lg-4">
-                        <div className="content">
-                            <p className="mb-4 fs-5" style={{ lineHeight: '1.8' }}>
+                        <div className="content" data-aos="fade-right">
+                            <p className="mb-4 fs-5" style={{ lineHeight: '1.8' }} data-aos="fade-right">
                                 We apply innovative design solutions to enhance our products and to exceed client expectations. Our team collaborates closely with our clients to deliver the best possible results.
                             </p>
 
-                            <p className="fs-5" style={{ lineHeight: '1.8' }}>
+                            <p className="fs-5" style={{ lineHeight: '1.8' }} data-aos="fade-right">
                                 With over 40 years' industry experience, LSF Commercial specialise in the design, manufacturing and installation of architectural aluminium systems: creating attractive high-performance shopfronts, curtain wall facades, windows and doors for commercial clients across every sector.
                             </p>
                         </div>
@@ -68,25 +70,26 @@ export default function About() {
             <Container fluid className="p-0">
                 <Row className="mx-0">
                     <Col md={6} className="bg-black text-white p-5">
-                        <div className="mb-4">
-                            <small className="text-uppercase">Services</small>
+                        <div className="mb-4" data-aos="fade-right">
+                            <small className="text-uppercase" style={{ color: "#16b943" }}>Services</small>
                         </div>
 
                         <h2 className="text-uppercase mb-5 display-4 fw-bold">Our Philosophy</h2>
 
                         <div className="mb-4">
                             <div
+                                data-aos="fade-in"
                                 className={`d-flex align-items-center cursor-pointer mb-3 ${activeTab === 'mission' ? 'text-danger' : ''}`}
                                 onClick={() => setActiveTab('mission')}
                             >
                                 <div className="me-2" style={{ width: '20px' }}>
                                     {activeTab === 'mission' ? '-' : '+'}
                                 </div>
-                                <h3 className="text-uppercase m-0">Our Mission</h3>
+                                <h3 className="text-uppercase m-0" style={{ color: "#16b943" }}>Our Mission</h3>
                             </div>
 
                             {activeTab === 'mission' && (
-                                <p className="ms-4">
+                                <p className="ms-4" data-aos="slide-up">
                                     With more than 40 years experience in manufacturing aluminium systems,
                                     our mission at LSF Commercial is to provide our customers with a bespoke,
                                     flexible and competitive service that is second to none.
@@ -99,14 +102,14 @@ export default function About() {
                                 className={`d-flex align-items-center cursor-pointer mb-3 ${activeTab === 'vision' ? 'text-danger' : ''}`}
                                 onClick={() => setActiveTab('vision')}
                             >
-                                <div className="me-2" style={{ width: '20px' }}>
+                                <div className="me-2" style={{ width: '20px' }} data-aos="slide-in">
                                     {activeTab === 'vision' ? '-' : '+'}
                                 </div>
-                                <h3 className="text-uppercase m-0">Our Vision</h3>
+                                <h3 className="text-uppercase m-0" style={{ color: "#16b943" }}>Our Vision</h3>
                             </div>
 
                             {activeTab === 'vision' && (
-                                <p className="ms-4">
+                                <p className="ms-4" data-aos="slide-up">
                                     With more than 40 years experience in manufacturing aluminium systems,
                                     our mission at LSF Commercial is to provide our customers with a bespoke,
                                     flexible and competitive service that is second to none.
@@ -122,11 +125,11 @@ export default function About() {
                                 <div className="me-2" style={{ width: '20px' }}>
                                     {activeTab === 'values' ? '-' : '+'}
                                 </div>
-                                <h3 className="text-uppercase m-0">Our Values</h3>
+                                <h3 className="text-uppercase m-0" style={{ color: "#16b943" }}>Our Values</h3>
                             </div>
 
                             {activeTab === 'values' && (
-                                <p className="ms-4">
+                                <p className="ms-4" data-aos="slide-up">
                                     With more than 40 years experience in manufacturing aluminium systems,
                                     our mission at LSF Commercial is to provide our customers with a bespoke,
                                     flexible and competitive service that is second to none.
@@ -135,10 +138,10 @@ export default function About() {
                         </div>
                     </Col>
 
-                    <Col md={6} className="bg-danger text-white p-5 d-flex align-items-center about_background">
+                    <Col md={6} className=" text-white p-5 d-flex align-items-center about_background" style={{ background: "#16b943" }}>
                         <div>
                             <h2 className="text-uppercase mb-4">Who We Are</h2>
-                            <p className="mb-0">
+                            <p className="mb-0" style={{ fontSize: "20px" }} data-aos="slide-up">
                                 From our manufacturing facility in Rainham Essex, our highly-skilled
                                 engineers use state of the art technology and machinery to design and
                                 manufacture commercial aluminium building solutions to suit the needs

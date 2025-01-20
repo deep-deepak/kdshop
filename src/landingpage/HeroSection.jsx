@@ -44,6 +44,7 @@ const HeroSection = () => {
         >
             {/* Dark overlay */}
             <div
+                data-aos="zoom-in"
                 style={{
                     position: 'absolute',
                     top: 0,
@@ -78,7 +79,11 @@ const HeroSection = () => {
                         height: '2em', // Fixed height to prevent layout shift
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'center'
+                        justifyContent: 'center',
+                        color: "#16b943",
+                        fontWeight: 600,
+
+
                     }}
                 >
                     {services[currentTextIndex]}

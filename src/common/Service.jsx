@@ -13,7 +13,6 @@ export default function Service() {
 
     const serviceName = currentPath.replace(/[\-/]/g, '');
     const data = serviceData[serviceName];
-    console.log("data", data)
 
     // Fallback in case data is not found
     if (!data) {
@@ -41,16 +40,17 @@ export default function Service() {
                                 alt="Office interior with glass partitions"
                                 className="img-fluid rounded"
                                 style={{ height: "450px", width: "600px" }}
+                                data-aos="slide-up"
                             />
                         </Card>
                     </Col>
                     <Col lg={6}>
                         <div className="p-3">
-                            <h2 className="mb-4 fw-bold">
+                            <h2 className="mb-4 fw-bold" data-aos="slide-in">
                                 {data.heroSection.title}
                             </h2>
                             {data.heroSection.description.map((paragraph, index) => (
-                                <p key={index} className="mb-4 text-dark">
+                                <p key={index} className="mb-4 text-dark" data-aos="fade-up">
                                     {paragraph}
                                 </p>
                             ))}
@@ -61,7 +61,7 @@ export default function Service() {
 
             {/* Gallery Section */}
             <Container className="py-5">
-                <h2 className="text-center mb-4 text-4xl font-bold text-gray-800">
+                <h2 className="text-center mb-4 text-4xl font-bold text-gray-800" data-aos="fade-right">
                     {data.gallerySection.title}
                 </h2>
 
@@ -73,7 +73,7 @@ export default function Service() {
                                 href={download.link}
                                 className="text-decoration-none text-dark d-flex align-items-center justify-content-center gap-2"
                             >
-                                <FaArrowRight size={20} />
+                                <FaArrowRight size={20} style={{ color: "#16b943" }} />
                                 <span>{download.title}</span>
                             </a>
                         </Col>
@@ -85,6 +85,7 @@ export default function Service() {
                     {data.gallerySection.gallery.map((item) => (
                         <Col key={item.id} md={4}>
                             <img
+                                data-aos="fade-up"
                                 style={{ height: "350px", width: "450px" }}
                                 src={item.image}
                                 alt={item.alt}
@@ -98,7 +99,7 @@ export default function Service() {
                 <div className="text-center">
                     <Button
                         variant="outline-danger"
-                        className="px-4 py-2 text-uppercase tracking-widest"
+                        className="px-4 py-2 text-uppercase tracking-widest view_gallery"
                     >
                         View Gallery
                     </Button>

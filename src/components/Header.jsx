@@ -160,7 +160,7 @@ const Header = () => {
 
                 .nav-link-custom:hover,
                 .nav-link-custom.active {
-                    color: #dc3545 !important;
+                    color: #16b943 !important;
                     font-size: 16px;
                 }
 
@@ -177,7 +177,7 @@ const Header = () => {
                 }
 
                 .dropdown-category-title {
-                    color: #dc3545;
+                    color: #16b943;
                     padding: 0.5rem 1.5rem;
                     font-weight: 600;
                     font-size: 14px;
@@ -194,7 +194,7 @@ const Header = () => {
                 .dropdown-item-custom:hover,
                 .dropdown-item-custom.active {
                     background-color: #494f54 !important;
-                    color: #dc3545 !important;
+                    color: #16b943 !important;
                     font-size: 15px;
                 }
 
