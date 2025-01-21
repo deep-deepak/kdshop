@@ -24,7 +24,7 @@ export default function About() {
                             }}
                         >
                             <img
-                                src="/images/aboutsec.jpg"
+                                src="/images/commerce.avif"
                                 alt="Modern Commercial Building"
                                 className="img-fluid w-100"
                                 style={{
@@ -38,12 +38,12 @@ export default function About() {
 
                     <Col lg={6} className="ps-lg-4">
                         <div className="content" data-aos="fade-right">
-                            <p className="mb-4 fs-5" style={{ lineHeight: '1.8' }} data-aos="fade-right">
-                                We apply innovative design solutions to enhance our products and to exceed client expectations. Our team collaborates closely with our clients to deliver the best possible results.
+                            <p className="mb-4 fs-5" style={{ lineHeight: '1.8', fontWeight: "bold" }} data-aos="fade-right">
+                                At R&D Commercial, we believe in pushing the boundaries of design and engineering. Our innovative solutions are crafted to elevate every project, from the initial concept to the final installation, ensuring superior functionality and exceptional results.
                             </p>
 
                             <p className="fs-5" style={{ lineHeight: '1.8' }} data-aos="fade-right">
-                                With over 40 years' industry experience, LSF Commercial specialise in the design, manufacturing and installation of architectural aluminium systems: creating attractive high-performance shopfronts, curtain wall facades, windows and doors for commercial clients across every sector.
+                                With over 10 years of industry experience, we specialize in the design, manufacturing, and installation of advanced architectural aluminium systems. We create high-performance commercial products such as shopfronts, curtain wall facades, windows, and doors that cater to businesses across a wide range of sectors.
                             </p>
                         </div>
                     </Col>
@@ -53,20 +53,21 @@ export default function About() {
         .content {
           max-width: 90%;
         }
-        
+
         @media (max-width: 992px) {
           .content {
             max-width: 100%;
           }
         }
-        
+
         @media (max-width: 768px) {
           .fs-5 {
             font-size: 1rem !important;
           }
         }
-      `}</style>
+    `}</style>
             </Container>
+
             <Container fluid className="p-0">
                 <Row className="mx-0">
                     <Col md={6} className="bg-black text-white p-5">
@@ -90,9 +91,7 @@ export default function About() {
 
                             {activeTab === 'mission' && (
                                 <p className="ms-4" data-aos="slide-up">
-                                    With more than 40 years experience in manufacturing aluminium systems,
-                                    our mission at LSF Commercial is to provide our customers with a bespoke,
-                                    flexible and competitive service that is second to none.
+                                    Our mission at R&D Commercial is to provide exceptional architectural aluminium systems that meet the highest standards of quality, performance, and design. We strive to deliver tailored solutions with a focus on innovation, customer satisfaction, and industry-leading craftsmanship.
                                 </p>
                             )}
                         </div>
@@ -110,9 +109,7 @@ export default function About() {
 
                             {activeTab === 'vision' && (
                                 <p className="ms-4" data-aos="slide-up">
-                                    With more than 40 years experience in manufacturing aluminium systems,
-                                    our mission at LSF Commercial is to provide our customers with a bespoke,
-                                    flexible and competitive service that is second to none.
+                                    Our vision is to be the leading provider of cutting-edge, sustainable aluminium solutions for the commercial sector. We aim to set new standards in architectural design, contributing to building spaces that inspire and perform at the highest level.
                                 </p>
                             )}
                         </div>
@@ -130,27 +127,23 @@ export default function About() {
 
                             {activeTab === 'values' && (
                                 <p className="ms-4" data-aos="slide-up">
-                                    With more than 40 years experience in manufacturing aluminium systems,
-                                    our mission at LSF Commercial is to provide our customers with a bespoke,
-                                    flexible and competitive service that is second to none.
+                                    At R&D Commercial, we value innovation, integrity, and collaboration. We are committed to providing bespoke solutions that reflect the unique needs of our clients while maintaining a focus on sustainability and high-quality craftsmanship.
                                 </p>
                             )}
                         </div>
                     </Col>
 
-                    <Col md={6} className=" text-white p-5 d-flex align-items-center about_background" style={{ background: "#16b943" }}>
+                    <Col md={6} className="text-white p-5 d-flex align-items-center about_background" style={{ background: "#16b943" }}>
                         <div>
                             <h2 className="text-uppercase mb-4">Who We Are</h2>
                             <p className="mb-0" style={{ fontSize: "20px" }} data-aos="slide-up">
-                                From our manufacturing facility in Rainham Essex, our highly-skilled
-                                engineers use state of the art technology and machinery to design and
-                                manufacture commercial aluminium building solutions to suit the needs
-                                of your business, staff and premises.
+                                From our manufacturing facility in Rainham, Essex, R&D Commercial’s highly-skilled engineers utilize cutting-edge technology and machinery to design and produce high-performance aluminium building solutions. We are dedicated to meeting the needs of businesses, creating functional, aesthetically pleasing spaces.
                             </p>
                         </div>
                     </Col>
                 </Row>
             </Container>
+
         </div>
     )
 }

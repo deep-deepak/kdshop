@@ -6,62 +6,63 @@ const AboutSection = () => {
         {
             id: 1,
             title: 'COMMERCIAL',
-            image: '/images/about1.jpg', // Replace with actual image path
+            image: '/images/commercial.avif', // Replace with actual image path
             bgPosition: 'center',
         },
         {
             id: 2,
             title: 'EDUCATION',
-            image: '/images/about2.jpg', // Replace with actual image path
+            image: '/images/educational.avif', // Replace with actual image path
             bgPosition: 'center',
         },
         {
             id: 3,
             title: 'RETAIL',
-            image: '/images/about3.jpg', // Replace with actual image path
+            image: "/images/retail.avif", // Replace with actual image path
             bgPosition: 'center',
         },
         {
             id: 4,
             title: 'RESIDENTIAL',
-            image: '/images/about4.jpg', // Replace with actual image path
-            bgPosition: 'center'
+            image: '/images/residence.avif', // Replace with actual image path
+            bgPosition: 'center',
         },
     ];
 
     return (
-        <Container className="py-5" >
+        <Container className="py-5">
+            {/* About Header */}
             <Row className="mb-5" data-aos="fade-right">
                 <Col md={6}>
                     <div className="about-header">
-                        <h6 className="text-uppercase mb-3" style={{ color: "#16b943" }}>ABOUT US</h6>
-                        <h1 className="about_heading">WE CREATE AND TURN INTO REALITY</h1>
-                        <div className="red-line mt-3" style={{
-                            width: '50px',
-                            height: '3px',
-                            backgroundColor: '#16b943'
-                        }}></div>
+                        <h6 className="text-uppercase mb-3" style={{ color: "#16b943" }}>WHO WE ARE</h6>
+                        <h1 className="about_heading" data-aos="fade-up">TURNING INNOVATIVE IDEAS INTO STRUCTURAL REALITY</h1>
+                        <div
+                            className="red-line mt-3"
+                            style={{
+                                width: '50px',
+                                height: '3px',
+                                backgroundColor: '#16b943',
+                            }}
+                            data-aos="fade-right"
+                        ></div>
                     </div>
                 </Col>
-                <Col md={6}>
+                <Col md={6} data-aos="fade-left">
                     <p className="mb-4" style={{ fontWeight: "bold" }}>
-                        LSF Commercial offers aluminium windows, doors, curtain walling,
-                        shopfronts and fire rated products. With over 40 years of experience,
-                        we push the boundaries and apply innovative design solutions to enhance
-                        our products and exceed clients expectations.
+                        At R&D Commercial, we specialize in high-quality aluminium windows, doors, curtain walling, shopfronts, and fire-rated solutions. With over a decade of experience, we continually innovate to provide cutting-edge designs that push boundaries and deliver exceptional results.
                     </p>
                     <p>
-                        Offering a complete commercial property enhancement service, we are
-                        specialists in designing, producing and installing aluminium doors, windows,
-                        shopfronts and curtain walling. From schools and colleges, to restaurants,
-                        banks, offices and showrooms, we enhance commercial buildings across every
-                        business sector.
+                        As experts in commercial property enhancement, we handle everything from concept design to production and installation. Whether it’s schools, restaurants, banks, offices, or showrooms, we are committed to transforming your commercial space with precision and style, ensuring that every project meets and exceeds client expectations.
                     </p>
                 </Col>
             </Row>
+
+
+            {/* Services Section */}
             <Row className="g-4" data-aos="fade-in">
                 {services.map((service) => (
-                    <Col key={service.id} xs={12} sm={6} lg={3}>
+                    <Col key={service.id} xs={12} sm={6} lg={3} data-aos="zoom-in">
                         <div
                             className="service-card position-relative"
                             style={{
@@ -70,29 +71,40 @@ const AboutSection = () => {
                                 backgroundSize: 'cover',
                                 backgroundPosition: service.bgPosition,
                                 cursor: 'pointer',
-                                transition: 'transform 0.3s ease',
-                                boxShadow: "0px 9px 13px 0px rgba(0, 0, 0, 0.09)"
+                                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                boxShadow: "0px 9px 13px 0px rgba(0, 0, 0, 0.09)",
                             }}
+                            onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+                            onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
                         >
-                            {/* Overlay Div */}
+                            {/* Overlay */}
                             <div
                                 className="service-overlay position-absolute w-100 h-100"
                                 style={{
-                                    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust opacity for transparency
+                                    background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7))',
                                     top: 0,
                                     left: 0,
                                     zIndex: 1,
+                                    transition: 'background 0.3s ease',
                                 }}
                             />
 
-                            {/* Content Div */}
+                            {/* Content */}
                             <div
                                 className="service-content position-absolute bottom-0 start-0 w-100 p-3"
-                                style={{ zIndex: 2 }} // Ensure this content is above the overlay
+                                style={{
+                                    zIndex: 2,
+                                    textAlign: 'center',
+                                }}
                             >
                                 <h3
-                                    data-aos="slide-up"
                                     className="text-white mb-0 about_heading3"
+                                    style={{
+                                        textTransform: 'uppercase',
+                                        fontWeight: 'bold',
+                                        letterSpacing: '1px',
+                                    }}
+                                    data-aos="slide-up"
                                 >
                                     {service.title}
                                 </h3>
@@ -101,7 +113,6 @@ const AboutSection = () => {
                     </Col>
                 ))}
             </Row>
-
         </Container>
     );
 };

@@ -93,8 +93,15 @@ const ContactForm = () => {
                             </Button>
                         </Form>
                     </Col>
+
                 </Row>
+
             </Container>
+            <Row>
+                <Col md={12} style={{ borderTop: "5px solid #16b943" }}>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.4677244362933!2d0.08124417612969224!3d51.5413219082253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a6718aed05ed%3A0xf7b20fd2ea8aea46!2s77A%20Longbridge%20Rd%2C%20Barking%20IG11%208TG%2C%20UK!5e0!3m2!1sen!2sin!4v1737484393659!5m2!1sen!2sin" width="100%" height="450" style={{ border: "0" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </Col>
+            </Row>
         </Layout>
     );
 };

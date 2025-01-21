@@ -8,7 +8,7 @@ const ProductsSection = () => {
             <Row className="justify-content-center align-items-center mx-4 mx-md-5" style={{ minHeight: '70vh' }}>
                 <Col md={5} className="mb-4 mb-md-0">
                     <div className="position-relative">
-                        <h1 className=" fw-bold mb-4 product_heading" data-aos="fade-down">OUR PRODUCTS</h1>
+                        <h1 className="fw-bold mb-4 product_heading" data-aos="fade-down">OUR INNOVATIVE PRODUCTS</h1>
                         <div className="red-line mt-3"
                             data-aos="fade-right"
                             style={{
@@ -21,16 +21,12 @@ const ProductsSection = () => {
 
                 <Col md={7}>
                     <div className="pe-md-5">
-                        <p className="mb-4 fs-5" data-aos="zoom-in">
-                            We specialize in author's projects which represent your individuality. Our
-                            award-winning designers know how to create a perfect space for your.
+                        <p className="mb-4 fs-5" data-aos="zoom-in" style={{ fontWeight: "bold" }}>
+                            At R&D Commercial, we believe in creating solutions that reflect your unique vision. Our award-winning design team specializes in crafting bespoke products tailored to your needs.
                         </p>
 
                         <p className="mb-4 fs-5" data-aos="zoom-in">
-                            We specialise in a range of products, from aluminium windows and curtain walling to fire resistant systems and shutters. Everything LSF
-                            Commercial creates is to the highest of standards, with durable materials,
-                            qualitative work and innovative technologies. Click below and learn more
-                            about each product we offer.
+                            We offer a wide range of high-performance products, including state-of-the-art aluminium windows, curtain walling systems, fire-rated solutions, and robust shutters. All of our products are built with precision, using the highest quality materials and cutting-edge technologies. We ensure durability and design excellence, creating the perfect blend of functionality and style. Explore our offerings below to discover how we can elevate your space.
                         </p>
                     </div>
                 </Col>
@@ -38,15 +34,16 @@ const ProductsSection = () => {
 
             <style jsx>{`
         @media (max-width: 768px) {
-          .display-3 {
-            font-size: 2.5rem;
-          }
-          .fs-5 {
-            font-size: 1rem !important;
-          }
+            .display-3 {
+                font-size: 2.5rem;
+            }
+            .fs-5 {
+                font-size: 1rem !important;
+            }
         }
-      `}</style>
+    `}</style>
         </Container>
+
     );
 };
 

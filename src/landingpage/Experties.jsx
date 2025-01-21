@@ -16,7 +16,7 @@ const slides = [
     {
         title: "THE PROCESS",
         subtitle: "Installation",
-        content: "Finally, once the product has been fabricated we take it to site. Safety is paramount to LSF Commercial. We work closely with a team of highly qualified safety consultants. Once safety checks are complete, only then do we start installing to the customers needs."
+        content: "Finally, once the product has been fabricated we take it to site. Safety is paramount to R&D Commercial. We work closely with a team of highly qualified safety consultants. Once safety checks are complete, only then do we start installing to the customers needs."
     }
 ];
 
@@ -56,25 +56,22 @@ const ExpertiseSection = () => {
                     <div className="d-flex flex-column justify-content-center h-100">
                         <div className="expertise-content" style={{ maxWidth: '600px', margin: '0 auto' }}>
                             <p className="small mb-3" style={{ color: "#16b943" }} data-aos="slide-up">EXPERTISE</p>
-                            <h2 className="display-4 fw-bold mb-4" style={{ marginBottom: "20px" }}>WHY CHOOSE US?</h2>
+                            <h2 className="display-4 fw-bold mb-4" style={{ marginBottom: "20px" }}>WHY PARTNER WITH US?</h2>
                             <div className="red-line mt-3"
                                 data-aos="fade-in"
                                 style={{
                                     width: '50px',
                                     height: '3px',
                                     backgroundColor: '#16b943'
-
                                 }}></div>
                             <p className="mb-5 text-light" style={{ marginTop: "20px" }} data-aos="slide-up">
-                                Our experts are here to offer you professional and specialised window glazing guidance.
-                                We will be able to supply sophisticated architectural glazing for your project.
-                                For over 40 years, LSF Commercial has been a market leader in the field of architectural glazing in London.
+                                Our team of experts is dedicated to providing you with unparalleled window glazing solutions. With over a decade of experience, we specialize in delivering high-end architectural glazing that suits the unique needs of your project. From design to installation, we ensure top-quality results every time.
                             </p>
                             <Button
                                 variant="outline-danger"
                                 size="lg"
                                 className="rounded-0 px-4 about_us_btn"
-
+                                aria-label="Learn more about R&D Commercial"
                             >
                                 ABOUT US
                             </Button>
@@ -155,10 +152,14 @@ const ExpertiseSection = () => {
 
             <style jsx>{`
         .btn:focus {
-          box-shadow: none;
+            box-shadow: none;
         }
-      `}</style>
+        .slide-content {
+            transition: transform 0.3s ease;
+        }
+    `}</style>
         </Container>
+
     );
 };
 

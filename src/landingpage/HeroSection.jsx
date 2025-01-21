@@ -11,34 +11,45 @@ const HeroSection = () => {
     ];
 
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
-    const [fadeIn, setFadeIn] = useState(true);
+    const [displayText, setDisplayText] = useState("");
+    const [charIndex, setCharIndex] = useState(0);
+    const typingSpeed = 100; // Speed of typing effect in milliseconds
+    const pauseDuration = 2000; // Pause duration after typing each service
 
     useEffect(() => {
-        const textInterval = setInterval(() => {
-            setFadeIn(false);
-            setTimeout(() => {
+        if (charIndex < services[currentTextIndex].length) {
+            const typingTimeout = setTimeout(() => {
+                setDisplayText((prev) => prev + services[currentTextIndex][charIndex]);
+                setCharIndex((prev) => prev + 1);
+            }, typingSpeed);
+
+            return () => clearTimeout(typingTimeout);
+        } else {
+            const pauseTimeout = setTimeout(() => {
+                setCharIndex(0);
+                setDisplayText("");
                 setCurrentTextIndex((prevIndex) =>
                     prevIndex === services.length - 1 ? 0 : prevIndex + 1
                 );
-                setFadeIn(true);
-            }, 500); // Wait for fade out before changing text
-        }, 2000); // Change every 2 seconds
+            }, pauseDuration);
 
-        return () => clearInterval(textInterval);
-    }, []);
+            return () => clearTimeout(pauseTimeout);
+        }
+    }, [charIndex, currentTextIndex, services]);
 
     return (
         <div
+            data-aos="slide-up"
             style={{
                 position: 'relative',
                 height: '100vh',
                 width: '100%',
                 overflow: 'hidden',
-                backgroundImage: 'url("https://londonshopfitters.co.uk/wp-content/uploads/2022/03/pexels-olga-lioncat-7245368-scaled.jpg")',
+                backgroundImage: 'url("https://img.freepik.com/premium-photo/modern-building_52137-38946.jpg?w=996")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
-                marginTop: '0',  // Remove margin as header is fixed
+                marginTop: '0', // Remove margin as header is fixed
                 paddingTop: '76px' // Add padding to account for fixed header
             }}
         >
@@ -66,50 +77,24 @@ const HeroSection = () => {
                         letterSpacing: '2px'
                     }}
                 >
-                    LSF COMMERCIAL
+                    R&D SHOP FRONT AND SHUTTERS
                 </h1>
                 <div
                     className="fs-4 position-relative"
                     style={{
                         fontSize: 'clamp(1rem, 3vw, 1.5rem)',
                         letterSpacing: '1px',
-                        opacity: fadeIn ? 1 : 0,
-                        transform: `translateY(${fadeIn ? 0 : '10px'})`,
-                        transition: 'all 0.5s ease-in-out',
                         height: '2em', // Fixed height to prevent layout shift
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         color: "#16b943",
                         fontWeight: 600,
-
-
                     }}
                 >
-                    {services[currentTextIndex]}
+                    {displayText}
                 </div>
             </Container>
-
-            {/* Optional: Skip forward/backward buttons */}
-            <div
-                className="position-absolute bottom-0 mb-4 w-100 d-flex justify-content-center gap-2"
-                style={{ zIndex: 2 }}
-            >
-                {services.map((_, index) => (
-                    <button
-                        key={index}
-                        className="btn p-0"
-                        onClick={() => {
-                            setFadeIn(false);
-                            setTimeout(() => {
-                                setCurrentTextIndex(index);
-                                setFadeIn(true);
-                            }, 500);
-                        }}
-
-                    />
-                ))}
-            </div>
         </div>
     );
 };
