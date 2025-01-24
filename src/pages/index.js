@@ -9,6 +9,8 @@ import AboutSection from "@/landingpage/About";
 import ExpertiseSection from "@/landingpage/Experties";
 import ProductsSection from "@/landingpage/ProductSection";
 import ProjectGallery from "@/landingpage/ProjectGallery ";
+import GallerySection from "@/containers/Gallery";
+import NewGallery from "@/containers/NewGallery";
 
 
 
@@ -21,6 +23,7 @@ export default function Home() {
         <AboutSection />
         <ExpertiseSection />
         <ProductsSection />
+        <NewGallery />
         <ProjectGallery />
       </Layout>
 

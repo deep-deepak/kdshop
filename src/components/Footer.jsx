@@ -73,6 +73,9 @@ const Footer = () => {
                             <li className="mb-3">
                                 <p className="mb-0">Email: kdshopfrontandshutters@gmail.com</p>
                             </li>
+                            <li className="mb-3">
+                                <p className="mb-0">Open: 24/7</p>
+                            </li>
                         </ul>
                     </Col>
                     <Col lg={3} md={6}>

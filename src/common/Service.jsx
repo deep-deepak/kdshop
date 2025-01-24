@@ -28,7 +28,7 @@ export default function Service() {
             <Seo title={formatString(currentPath)} description={`${formatString(currentPath)} description`} />  {/* Fixed spelling */}
             <PageHeading
                 title={formatString(currentPath)}
-                image={data.gallerySection.gallery[1].image}
+                image={`${data.gallerySection.gallery[1].image}`}
             />
             <Container className="py-5">
                 <Row className="align-items-center g-4">
@@ -98,6 +98,7 @@ export default function Service() {
                 {/* View Gallery Button */}
                 <div className="text-center">
                     <Button
+                        onClick={() => router.push("/gallery")}
                         variant="outline-danger"
                         className="px-4 py-2 text-uppercase tracking-widest view_gallery"
                     >

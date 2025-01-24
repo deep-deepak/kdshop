@@ -3,6 +3,8 @@
   --foreground: #171717;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -14,12 +16,13 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Oswald", Sans-serif;
+  font-family: "'Roboto', sans-serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -237,4 +240,121 @@ button.px-4.submit_btn.btn.btn-primary:hover {
 .gallery-description {
   font-size: 0.875rem;
   line-height: 1.5;
+}
+
+.updatedgalley {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+h1.updatedgalley_heading.aos-init.aos-animate {
+  color: white;
+  padding-bottom: 10px;
+  /* border-bottom: 5px solid #0fb23b; */
+  text-transform: uppercase;
+  font-size: 50px;
+  text-align: center;
+  width: 100;
+}
+
+.updatedgalley_inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.updatedgalley_inner .item {
+  flex: 1 1 calc(25% - 1rem);
+  /* Adjust width dynamically */
+  max-width: 250px;
+  height: auto;
+  transition: transform 0.5s, filter 0.5s;
+}
+
+@media (max-width: 768px) {
+  .updatedgalley_inner .item {
+    flex: 1 1 calc(50% - 1rem);
+    /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .updatedgalley_inner .item {
+    flex: 1 1 calc(100% - 1rem);
+    /* Single column for very small screens */
+  }
+}
+
+
+.updatedgalley-section {
+  position: relative;
+  background-image: url('/path/to/your/background-image.jpg');
+  /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+  /* Adjust as needed */
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  /* Adjust overlay color and transparency */
+  z-index: 1;
+}
+
+.updatedgalley {
+  position: relative;
+  z-index: 2;
+}
+
+.updatedgalley-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.updatedgalley-image:hover {
+  transform: scale(1.1);
+}
+
+
+.Image_gallery {
+  background: #141414;
+  padding: 1vh;
+  max-width: 90%;
+  margin-inline: auto;
+  border-radius: 8px;
+}
+
+.Image_gallery-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+}
+
+.Image_gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.Image_gallery:hover img:not(:hover) {
+  transform: scale(0.9);
+  opacity: 0.6;
+  filter: grayscale(70%);
 }

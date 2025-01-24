@@ -82,7 +82,7 @@ const HeroSection = () => {
                 <div
                     className="fs-4 position-relative"
                     style={{
-                        fontSize: 'clamp(1rem, 3vw, 1.5rem)',
+                        fontSize: 'clamp(2rem, 3vw, 1.5rem)!important',
                         letterSpacing: '1px',
                         height: '2em', // Fixed height to prevent layout shift
                         display: 'flex',
