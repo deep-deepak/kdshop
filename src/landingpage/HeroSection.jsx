@@ -77,7 +77,7 @@ const HeroSection = () => {
                         letterSpacing: '2px'
                     }}
                 >
-                    R&D SHOP FRONT AND SHUTTERS
+                    K&D SHOP FRONT AND SHUTTERS
                 </h1>
                 <div
                     className="fs-4 position-relative"

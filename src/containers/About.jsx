@@ -39,7 +39,7 @@ export default function About() {
                     <Col lg={6} className="ps-lg-4">
                         <div className="content" data-aos="fade-right">
                             <p className="mb-4 fs-5" style={{ lineHeight: '1.8', fontWeight: "bold" }} data-aos="fade-right">
-                                At R&D Commercial, we believe in pushing the boundaries of design and engineering. Our innovative solutions are crafted to elevate every project, from the initial concept to the final installation, ensuring superior functionality and exceptional results.
+                                At K&D Commercial, we believe in pushing the boundaries of design and engineering. Our innovative solutions are crafted to elevate every project, from the initial concept to the final installation, ensuring superior functionality and exceptional results.
                             </p>
 
                             <p className="fs-5" style={{ lineHeight: '1.8' }} data-aos="fade-right">
@@ -91,7 +91,7 @@ export default function About() {
 
                             {activeTab === 'mission' && (
                                 <p className="ms-4" data-aos="slide-up">
-                                    Our mission at R&D Commercial is to provide exceptional architectural aluminium systems that meet the highest standards of quality, performance, and design. We strive to deliver tailored solutions with a focus on innovation, customer satisfaction, and industry-leading craftsmanship.
+                                    Our mission at K&D Commercial is to provide exceptional architectural aluminium systems that meet the highest standards of quality, performance, and design. We strive to deliver tailored solutions with a focus on innovation, customer satisfaction, and industry-leading craftsmanship.
                                 </p>
                             )}
                         </div>
@@ -127,7 +127,7 @@ export default function About() {
 
                             {activeTab === 'values' && (
                                 <p className="ms-4" data-aos="slide-up">
-                                    At R&D Commercial, we value innovation, integrity, and collaboration. We are committed to providing bespoke solutions that reflect the unique needs of our clients while maintaining a focus on sustainability and high-quality craftsmanship.
+                                    At K&D Commercial, we value innovation, integrity, and collaboration. We are committed to providing bespoke solutions that reflect the unique needs of our clients while maintaining a focus on sustainability and high-quality craftsmanship.
                                 </p>
                             )}
                         </div>
@@ -137,7 +137,7 @@ export default function About() {
                         <div>
                             <h2 className="text-uppercase mb-4">Who We Are</h2>
                             <p className="mb-0" style={{ fontSize: "20px" }} data-aos="slide-up">
-                                From our manufacturing facility in Rainham, Essex, R&D Commercial’s highly-skilled engineers utilize cutting-edge technology and machinery to design and produce high-performance aluminium building solutions. We are dedicated to meeting the needs of businesses, creating functional, aesthetically pleasing spaces.
+                                From our manufacturing facility in Rainham, Essex, K&D Commercial’s highly-skilled engineers utilize cutting-edge technology and machinery to design and produce high-performance aluminium building solutions. We are dedicated to meeting the needs of businesses, creating functional, aesthetically pleasing spaces.
                             </p>
                         </div>
                     </Col>

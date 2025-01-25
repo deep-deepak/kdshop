@@ -50,7 +50,7 @@ const AboutSection = () => {
                 </Col>
                 <Col md={6} data-aos="fade-left">
                     <p className="mb-4" style={{ fontWeight: "bold" }}>
-                        At R&D Commercial, we specialize in high-quality aluminium windows, doors, curtain walling, shopfronts, and fire-rated solutions. With over a decade of experience, we continually innovate to provide cutting-edge designs that push boundaries and deliver exceptional results.
+                        At K&D Commercial, we specialize in high-quality aluminium windows, doors, curtain walling, shopfronts, and fire-rated solutions. With over a decade of experience, we continually innovate to provide cutting-edge designs that push boundaries and deliver exceptional results.
                     </p>
                     <p>
                         As experts in commercial property enhancement, we handle everything from concept design to production and installation. Whether it’s schools, restaurants, banks, offices, or showrooms, we are committed to transforming your commercial space with precision and style, ensuring that every project meets and exceeds client expectations.

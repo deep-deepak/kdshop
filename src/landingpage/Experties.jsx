@@ -16,7 +16,7 @@ const slides = [
     {
         title: "THE PROCESS",
         subtitle: "Installation",
-        content: "Finally, once the product has been fabricated we take it to site. Safety is paramount to R&D Commercial. We work closely with a team of highly qualified safety consultants. Once safety checks are complete, only then do we start installing to the customers needs."
+        content: "Finally, once the product has been fabricated we take it to site. Safety is paramount to K&D Commercial. We work closely with a team of highly qualified safety consultants. Once safety checks are complete, only then do we start installing to the customers needs."
     }
 ];
 
@@ -71,7 +71,7 @@ const ExpertiseSection = () => {
                                 variant="outline-danger"
                                 size="lg"
                                 className="rounded-0 px-4 about_us_btn"
-                                aria-label="Learn more about R&D Commercial"
+                                aria-label="Learn more about K&D Commercial"
                             >
                                 ABOUT US
                             </Button>

@@ -22,7 +22,7 @@ const ProductsSection = () => {
                 <Col md={7}>
                     <div className="pe-md-5">
                         <p className="mb-4 fs-5" data-aos="zoom-in" style={{ fontWeight: "bold" }}>
-                            At R&D Commercial, we believe in creating solutions that reflect your unique vision. Our award-winning design team specializes in crafting bespoke products tailored to your needs.
+                            At K&D Commercial, we believe in creating solutions that reflect your unique vision. Our award-winning design team specializes in crafting bespoke products tailored to your needs.
                         </p>
 
                         <p className="mb-4 fs-5" data-aos="zoom-in">
