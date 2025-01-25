@@ -8,7 +8,7 @@ export default function About() {
     return (
         <div>
             <Seo title={"About us"} descrption={"About us page"} />
-            <PageHeading title={"About us"} image={"https://londonshopfitters.co.uk/wp-content/uploads/2022/03/pexels-olga-lioncat-7245368-scaled.jpg"} />
+            <PageHeading title={"About us"} image={"/images/gallery1.jpg"} />
 
             <Container fluid className="py-5">
                 <Row className="justify-content-center align-items-center mx-4 mx-md-5 gy-4">

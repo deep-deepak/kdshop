@@ -334,7 +334,7 @@ h1.updatedgalley_heading.aos-init.aos-animate {
 
 
 .Image_gallery {
-  background: #141414;
+  /* background: #141414; */
   padding: 1vh;
   max-width: 90%;
   margin-inline: auto;
@@ -355,6 +355,6 @@ h1.updatedgalley_heading.aos-init.aos-animate {
 
 .Image_gallery:hover img:not(:hover) {
   transform: scale(0.9);
-  opacity: 0.6;
+  /* opacity: 0.6; */
   filter: grayscale(70%);
 }

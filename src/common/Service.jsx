@@ -70,7 +70,7 @@ export default function Service() {
                     {data.gallerySection.downloads.map((download) => (
                         <Col key={download.id} md={4} className="text-center">
                             <a
-                                href={download.link}
+                                href={"#"}
                                 className="text-decoration-none text-dark d-flex align-items-center justify-content-center gap-2"
                             >
                                 <FaArrowRight size={20} style={{ color: "#16b943" }} />

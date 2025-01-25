@@ -36,7 +36,7 @@ export default function NewGallery() {
             <Container fluid className="Image_gallery">
                 <Row className="g-3">
                     {images.slice(0, visibleCount).map((src, index) => (
-                        <Col key={index} xs={6} sm={4} md={3} lg={3}>
+                        <Col key={index} md={4}>
                             <div className="Image_gallery-item">
                                 <img src={src} alt={`Gallery ${index}`} className="img-fluid" />
                             </div>
