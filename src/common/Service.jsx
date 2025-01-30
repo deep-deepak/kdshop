@@ -10,9 +10,12 @@ import { formatString } from './formatString';
 export default function Service() {
     const router = useRouter();
     const currentPath = router.asPath;
+    console.log("currentPath", currentPath)
 
-    const serviceName = currentPath.replace(/[\-/]/g, '');
+    const serviceName = currentPath.replace(/[\/]/g, '');
+    console.log("setviceee", serviceName)
     const data = serviceData[serviceName];
+    console.log("dtaaaaa", data)
 
     // Fallback in case data is not found
     if (!data) {
@@ -27,7 +30,7 @@ export default function Service() {
         <div>
             <Seo title={formatString(currentPath)} description={`${formatString(currentPath)} description`} />  {/* Fixed spelling */}
             <PageHeading
-                title={formatString(currentPath)}
+                title={data.heroSection.title}
                 image={`${data.gallerySection.gallery[1].image}`}
             />
             <Container className="py-5">

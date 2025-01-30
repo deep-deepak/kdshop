@@ -5,6 +5,13 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  trailingSlash: true,
+  exportPathMap: async function () {
+    return {
+      '/': { page: '/' },
+      '/[service]': { page: '/[service]' },
+    }
+  },
 }
 
 export default nextConfig

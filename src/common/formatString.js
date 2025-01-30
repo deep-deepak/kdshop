@@ -1,5 +1,5 @@
 // utils/formatString.js
 
 export const formatString = (str) => {
-    return str.replace(/[\/-]/g, (match) => match === '/' ? '' : ' ');
+    return str.replace(/[\""/_]/g, (match) => match === '/' ? '' : ' ');
 };
