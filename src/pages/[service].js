@@ -1,18 +1,45 @@
 import Service from '@/common/Service';
 import Layout from '@/layout/Layout';
+import serviceData from '../data/api.json';
 
-const ServicePage = () => {
+export async function getStaticPaths() {
+    // Get all service paths from your api.json
+    const paths = Object.keys(serviceData).map((serviceName) => ({
+        params: { service: serviceName },
+    }));
 
+    return {
+        paths,
+        fallback: false,
+    };
+}
 
-    // Show a loading state if the page is being generated
+export async function getStaticProps({ params }) {
+    const serviceName = params.service;
+    console.log("serviceNamw", serviceName)
+    const data = serviceData[serviceName];
+    console.log("dataaaa", data)
 
+    if (!data) {
+        return {
+            notFound: true,
+        };
+    }
 
+    return {
+        props: {
+            serviceData: data,
+            serviceName,
+        },
+    };
+}
+
+const ServicePage = ({ serviceData, serviceName }) => {
     return (
         <Layout>
-            <Service />
+            <Service data={serviceData} serviceName={serviceName} />
         </Layout>
     );
 };
-
 
 export default ServicePage;

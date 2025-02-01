@@ -4,31 +4,26 @@ import Seo from './Seo';
 import PageHeading from './PageHeading';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { FaArrowRight } from "react-icons/fa";
-import serviceData from '../data/api.json';
 import { formatString } from './formatString';
 
-export default function Service() {
+export default function Service({ data, serviceName }) {
     const router = useRouter();
-    const currentPath = router.asPath;
-    console.log("currentPath", currentPath)
 
-    const serviceName = currentPath.replace(/[\/]/g, '');
-    console.log("setviceee", serviceName)
-    const data = serviceData[serviceName];
-    console.log("dtaaaaa", data)
+    if (router.isFallback) {
+        return <div>Loading...</div>;
+    }
 
     // Fallback in case data is not found
     if (!data) {
         return <div>Service not found</div>;
     }
 
-    if (router.isFallback) {
-        return <div>Loading...</div>;
-    }
-
     return (
         <div>
-            <Seo title={formatString(currentPath)} description={`${formatString(currentPath)} description`} />  {/* Fixed spelling */}
+            <Seo
+                title={formatString(serviceName)}
+                description={`${formatString(serviceName)} description`}
+            />
             <PageHeading
                 title={data.heroSection.title}
                 image={`${data.gallerySection.gallery[1].image}`}
@@ -109,6 +104,6 @@ export default function Service() {
                     </Button>
                 </div>
             </Container>
-        </div>
+        </div >
     );
 }
