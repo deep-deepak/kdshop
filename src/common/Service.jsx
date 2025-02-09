@@ -21,8 +21,8 @@ export default function Service({ data, serviceName }) {
     return (
         <div>
             <Seo
-                title={formatString(serviceName)}
-                description={`${formatString(serviceName)} description`}
+                title={data.title}
+                description={data.description}
             />
             <PageHeading
                 title={data.heroSection.title}

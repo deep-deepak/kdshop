@@ -20,26 +20,26 @@ const Header = () => {
                 {
                     category: 'Shop Fronts',
                     items: [
-                        { label: 'ALUMINIUM SHOP FRONTS', path: '/shopfrontsaluminium' },
-                        { label: 'GLASS SHOP FRONTS', path: '/shopfrontsglass' },
-                        { label: 'TIMBER SHOP FRONTS', path: '/shopfrontstimber' },
-                        { label: 'AUTOMATIC DOORS', path: '/shopfrontsautomaticdoors' },
+                        { label: 'ALUMINIUM SHOP FRONTS', path: '/shop-fronts-aluminium' },
+                        { label: 'GLASS SHOP FRONTS', path: '/shop-fronts-glass' },
+                        { label: 'TIMBER SHOP FRONTS', path: '/shop-fronts-timber' },
+                        { label: 'AUTOMATIC DOORS', path: '/shop-fronts-automatic-doors' },
                     ]
                 },
                 {
                     category: 'Shutters',
                     items: [
-                        { label: 'PERFORATED ROLLER SHUTTERS', path: '/shuttersperforated' },
-                        { label: 'PUNCHED ROLLER SHUTTERS', path: '/shutterspunched' },
-                        { label: 'GRILLE ROLLER SHUTTERS', path: '/shuttersgrille' },
+                        { label: 'PERFORATED ROLLER SHUTTERS', path: '/shutters-perforated' },
+                        { label: 'PUNCHED ROLLER SHUTTERS', path: '/shutters-punched' },
+                        { label: 'GRILLE ROLLER SHUTTERS', path: '/shutters-grille' },
                     ]
                 },
                 {
                     category: 'Other Services',
                     items: [
-                        { label: 'CURTAIN WALL SYSTEM', path: '/curtainwall' },
-                        { label: 'WINDOWS & DOORS', path: '/windowsdoors' },
-                        { label: 'PROTECTION SCREEN', path: '/protectionscreen' },
+                        { label: 'CURTAIN WALL SYSTEM', path: '/curtain-wall' },
+                        { label: 'WINDOWS & DOORS', path: '/windows-doors' },
+                        { label: 'PROTECTION SCREEN', path: '/protection-screen' },
                     ]
                 }
             ]

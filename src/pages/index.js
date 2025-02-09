@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <Seo title={"Home"} descrption={"Home page"} />
+        <Seo title={"Aluminium Shopfronts & Shutters | K & D Shopfront and Shutters"} descrption={"K & D Shopfront and Shutters offers top-quality aluminium windows, doors, shopfronts, and roller shutter repairs in London. Reliable installation & service near you!"} />
         <HeroSection />
         <AboutSection />
         <ExpertiseSection />
