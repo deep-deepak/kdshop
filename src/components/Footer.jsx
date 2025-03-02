@@ -63,8 +63,8 @@ const Footer = () => {
                         <h5 className="mb-4" style={{ color: "#16b943" }}>Contact Info</h5>
                         <ul className="list-unstyled">
                             <li className="mb-3">
-                                <p className="mb-0">77A longbridge</p>
-                                <p className="mb-0">barking</p>
+                                <p className="mb-0">2D kent pier rd,</p>
+                                <p className="mb-0">gravsend da119nb</p>
                                 {/* <p className="mb-0">Postal Code</p> */}
                             </li>
                             <li className="mb-3">

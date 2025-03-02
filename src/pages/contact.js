@@ -32,8 +32,8 @@ const ContactForm = () => {
                         <div className="mb-4">
                             <h5>Address:</h5>
                             <p className=" mb-0" style={{ color: "#16b943" }}>
-                                77A longbridg road,<br />
-                                barking
+                                72D kent pier rd,<br />
+                                gravsend da119nb
                             </p>
                         </div>
 
