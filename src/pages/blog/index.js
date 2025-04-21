@@ -13,9 +13,9 @@ export default function Home() {
                     {blogPosts.map((post) => (
                         <Col md={6} lg={4} key={post.id} className="mb-4">
                             <Card>
-                                <Card.Img variant="top" src={post.image} alt={post.title} />
+                                <Card.Img variant="top" src={post.image} alt={post.title} style={{height:"280px"}}/>
                                 <Card.Body>
-                                    <Card.Title>{post.title}</Card.Title>
+                                    <Card.Title style={{height:"80px"}}>{post.title}</Card.Title>
                                     <Card.Text className="text-muted">{post.date}</Card.Text>
                                     <Link href={`/blog/${post.slug}`} passHref>
                                         <Button className="read_more">Read More</Button>

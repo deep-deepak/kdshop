@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 
 // Fetch the blog post data based on the slug
 export async function getStaticProps({ params }) {
-    const blog = blogPosts.find((post) => post.slug === params.slug);
+    const blog = blogPosts.find((post) => post?.slug === params.slug);
 
     if (!blog) {
         return { notFound: true };
