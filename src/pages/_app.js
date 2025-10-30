@@ -13,29 +13,21 @@ export default function App({ Component, pageProps }) {
   // Initialize AOS animations
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      once: true, // Whether animation should happen only once
-      easing: "ease", // Default easing for animations
+      duration: 1000,
+      once: true,
+      easing: "ease",
     });
 
-    // Show the scroll button when user scrolls down
+    // Show scroll-to-top button when scrolling down
     const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowScrollButton(true); // Show button after scrolling 300px
-      } else {
-        setShowScrollButton(false); // Hide button when scroll is at the top
-      }
+      setShowScrollButton(window.scrollY > 300);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup event listener
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Function to scroll to top
+  // Scroll-to-top function
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -50,6 +42,8 @@ export default function App({ Component, pageProps }) {
           content="pDXrhOKbmr95EG4Rbtns71Q0xQx0SdWCKwhuMjICydw"
         />
         <link rel="canonical" href="https://kdshopfrontandshutters.com/" />
+
+        {/* JSON-LD Schema */}
         <script type="application/ld+json">
           {`
             {
@@ -72,7 +66,25 @@ export default function App({ Component, pageProps }) {
         </script>
       </Head>
 
-      {/* Google Analytics */}
+      {/* ✅ Google Tag (Google Ads - AW-17426309870) */}
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=AW-17426309870"
+      />
+      <Script
+        id="google-ads-tag"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17426309870');
+          `,
+        }}
+      />
+
+      {/* ✅ Google Analytics (G-058SP393MP) */}
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-058SP393MP"
@@ -90,15 +102,15 @@ export default function App({ Component, pageProps }) {
         }}
       />
 
-      {/* Scroll to Top Button */}
+      {/* Scroll-to-Top Button */}
       {showScrollButton && (
         <button
           onClick={scrollToTop}
           style={{
             position: "fixed",
-            bottom: "72px", // Adjust the position to be below the WhatsApp button
-            right: "20px", // Align it to the right side
-            backgroundColor: "#25d366", // WhatsApp green color
+            bottom: "72px",
+            right: "20px",
+            backgroundColor: "#25d366",
             color: "white",
             border: "none",
             borderRadius: "50%",
@@ -107,8 +119,8 @@ export default function App({ Component, pageProps }) {
             boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
             zIndex: 1000,
             fontSize: "30px",
-            height:"50px",
-            width:"50px"
+            height: "50px",
+            width: "50px",
           }}
         >
           ↑
