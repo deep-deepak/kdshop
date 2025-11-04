@@ -3,38 +3,25 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
-import Script from "next/script";
 import Head from "next/head";
 import WhatsAppModal from "@/common/WhatsAppModal";
 
 export default function App({ Component, pageProps }) {
   const [showScrollButton, setShowScrollButton] = useState(false);
 
-  // Initialize AOS animations
+  // ✅ Initialize AOS animations + scroll-to-top visibility
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: "ease",
-    });
+    AOS.init({ duration: 1000, once: true, easing: "ease" });
 
-    // Show scroll-to-top button when scrolling down
-    const handleScroll = () => {
-      setShowScrollButton(window.scrollY > 300);
-    };
-
+    const handleScroll = () => setShowScrollButton(window.scrollY > 300);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll-to-top function
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <>
-      <WhatsAppModal />
       <Head>
         <meta name="robots" content="index,follow" />
         <meta
@@ -43,66 +30,65 @@ export default function App({ Component, pageProps }) {
         />
         <link rel="canonical" href="https://kdshopfrontandshutters.com/" />
 
-        {/* JSON-LD Schema */}
-        <script type="application/ld+json">
-          {`
-            {
+        {/* ✅ Google Analytics (G-058SP393MP) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-058SP393MP"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-058SP393MP');
+            `,
+          }}
+        />
+
+        {/* ✅ Google Ads (AW-17426309870) */}
+        {/* <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17426309870"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17426309870');
+            `,
+          }}
+        /> */}
+
+        {/* ✅ JSON-LD Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "kdshopfrontandshutters",
-              "alternateName": "kdshopfrontandshutters",
-              "url": "https://kdshopfrontandshutters.com/",
-              "logo": "",
-              "contactPoint": {
+              name: "kdshopfrontandshutters",
+              alternateName: "kdshopfrontandshutters",
+              url: "https://kdshopfrontandshutters.com/",
+              logo: "",
+              contactPoint: {
                 "@type": "ContactPoint",
-                "telephone": "+44 7407057984",
-                "contactType": "customer service",
-                "contactOption": "TollFree",
-                "areaServed": "GB",
-                "availableLanguage": "en"
-              }
-            }
-          `}
-        </script>
+                telephone: "+44 7407057984",
+                contactType: "customer service",
+                contactOption: "TollFree",
+                areaServed: "GB",
+                availableLanguage: "en",
+              },
+            }),
+          }}
+        />
       </Head>
 
-      {/* ✅ Google Tag (Google Ads - AW-17426309870) */}
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=AW-17426309870"
-      />
-      <Script
-        id="google-ads-tag"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17426309870');
-          `,
-        }}
-      />
+      <WhatsAppModal />
 
-      {/* ✅ Google Analytics (G-058SP393MP) */}
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-058SP393MP"
-      />
-      <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-058SP393MP');
-          `,
-        }}
-      />
-
-      {/* Scroll-to-Top Button */}
+      {/* ✅ Scroll-to-Top Button */}
       {showScrollButton && (
         <button
           onClick={scrollToTop}
