@@ -47,7 +47,7 @@ export default function App({ Component, pageProps }) {
         />
 
         {/* ✅ Google Ads (AW-17426309870) */}
-        {/* <script
+        <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=AW-17426309870"
         ></script>
@@ -58,9 +58,10 @@ export default function App({ Component, pageProps }) {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'AW-17426309870');
+              gtag('event', 'page_view');
             `,
           }}
-        /> */}
+        />
 
         {/* ✅ JSON-LD Schema */}
         <script
