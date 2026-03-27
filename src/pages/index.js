@@ -8,6 +8,7 @@ import ProductsSection from "@/landingpage/ProductSection";
 import ProjectGallery from "@/landingpage/ProjectGallery ";
 import GallerySection from "@/containers/Gallery";
 import NewGallery from "@/containers/NewGallery";
+import VideoGallery from "@/containers/VideoGallery";
 import { FaArrowUp } from "react-icons/fa";
 import { BsChevronUp } from "react-icons/bs";
 import { Button } from "react-bootstrap";
@@ -75,6 +76,7 @@ export default function Home() {
         <ExpertiseSection />
         <ProductsSection />
         <NewGallery />
+        <VideoGallery />
         <ProjectGallery />
         {/* <ScrollToTop /> */}
       </Layout>
