@@ -869,7 +869,7 @@ export const blogPosts = [
     <p>Working with experienced professionals ensures smooth project execution.</p>
 
     <h2>Conclusion</h2>
-    <p>Investing in professional <a href='https://kdshopfrontandshutters.com/' target='_blank'>Shopfitting Services in Kent</a> enables businesses to create attractive, functional, and profitable commercial environments. Expert fit-out solutions support business growth while enhancing customer experiences.</p>
+    <p>Investing in professional <a href='https://www.google.com/maps/place/K+%26+D+Shopfront+and+Shutters/@51.4437121,0.3530814,17z/data=!3m1!4b1!4m6!3m5!1s0x47d8b7e41ca1d0db:0x49159a6ea28c0fb4!8m2!3d51.4437121!4d0.3556563!16s%2Fg%2F11x5hvs634?entry=tts&g_ep=EgoyMDI2MDYyNC4wIPu8ASoASAFQAw%3D%3D&skid=46de3ca3-ebd1-4741-ae92-be7e5e2af469/' target='_blank'>Shopfitting Services in Kent</a> enables businesses to create attractive, functional, and profitable commercial environments. Expert fit-out solutions support business growth while enhancing customer experiences.</p>
 
     <h2>FAQs</h2>
 
@@ -898,7 +898,7 @@ export const blogPosts = [
   "slug": "retail-fit-out-contractors-gravesend",
   "title": "Retail Fit Out Contractors Gravesend – Creating Exceptional Retail Experiences",
   "content":
-    `<p>Retail competition continues to increase, making customer experience more important than ever. Professional <a href='https://kdshopfrontandshutters.com/' target='_blank'>Retail Fit Out Contractors Gravesend</a> help businesses create engaging spaces that attract customers and encourage repeat visits.</p>
+    `<p>Retail competition continues to increase, making customer experience more important than ever. Professional <a href='https://www.google.com/maps/place/K+%26+D+Shopfront+and+Shutters/@51.4437121,0.3530814,17z/data=!3m1!4b1!4m6!3m5!1s0x47d8b7e41ca1d0db:0x49159a6ea28c0fb4!8m2!3d51.4437121!4d0.3556563!16s%2Fg%2F11x5hvs634?entry=tts&g_ep=EgoyMDI2MDYyNC4wIPu8ASoASAFQAw%3D%3D&skid=46de3ca3-ebd1-4741-ae92-be7e5e2af469/' target='_blank'>Retail Fit Out Contractors Gravesend</a> help businesses create engaging spaces that attract customers and encourage repeat visits.</p>
 
     <h2>What Is a Retail Fit Out?</h2>
     <p>A retail fit out involves transforming an empty or existing commercial space into a fully operational retail environment.</p>
@@ -1032,7 +1032,7 @@ export const blogPosts = [
     </ul>
 
     <h2>Conclusion</h2>
-    <p>Professional <a href='https://kdshopfrontandshutters.com/' target='_blank'>Commercial Interior Fit Out Gravesend</a> services help businesses create efficient, attractive, and future-ready commercial spaces. Investing in high-quality interiors can improve both employee productivity and customer satisfaction.</p>
+    <p>Professional <a href='https://www.google.com/maps/place/K+%26+D+Shopfront+and+Shutters/@51.4437121,0.3530814,17z/data=!3m1!4b1!4m6!3m5!1s0x47d8b7e41ca1d0db:0x49159a6ea28c0fb4!8m2!3d51.4437121!4d0.3556563!16s%2Fg%2F11x5hvs634?entry=tts&g_ep=EgoyMDI2MDYyNC4wIPu8ASoASAFQAw%3D%3D&skid=46de3ca3-ebd1-4741-ae92-be7e5e2af469/' target='_blank'>Commercial Interior Fit Out Gravesend</a> services help businesses create efficient, attractive, and future-ready commercial spaces. Investing in high-quality interiors can improve both employee productivity and customer satisfaction.</p>
 
     <h2>FAQs</h2>
 
@@ -1061,7 +1061,7 @@ export const blogPosts = [
   "slug": "office-fit-out-services-gravesend",
   "title": "Office Fit Out Services Gravesend – Designing Productive Workspaces",
   "content":
-    `<p>The workplace environment significantly impacts employee productivity, collaboration, and well-being. Professional <a href='https://kdshopfrontandshutters.com/' target='_blank'>Office Fit Out Services Gravesend</a> help organizations create modern workspaces that support business success.</p>
+    `<p>The workplace environment significantly impacts employee productivity, collaboration, and well-being. Professional <a href='https://www.google.com/maps/place/K+%26+D+Shopfront+and+Shutters/@51.4437121,0.3530814,17z/data=!3m1!4b1!4m6!3m5!1s0x47d8b7e41ca1d0db:0x49159a6ea28c0fb4!8m2!3d51.4437121!4d0.3556563!16s%2Fg%2F11x5hvs634?entry=tts&g_ep=EgoyMDI2MDYyNC4wIPu8ASoASAFQAw%3D%3D&skid=46de3ca3-ebd1-4741-ae92-be7e5e2af469/' target='_blank'>Office Fit Out Services Gravesend</a> help organizations create modern workspaces that support business success.</p>
 
     <h2>Why Office Fit Outs Matter</h2>
     <p>A well-designed office can:</p>
