@@ -797,7 +797,7 @@ export const blogPosts = [
     <h3>5. How much does shop fitting cost?</h3>
     <p>Costs vary depending on design requirements, materials, and project scope.</p>`,
 
-  "image": "/blog/shopfront2.jpg",
+  "image": "/blog/shopfitters-gravesend.jpg",
   "metaTitle": "Shop Fitters in Gravesend | Professional Retail Fit Out Services",
   "metaDescription": "Looking for professional shop fitters in Gravesend? Discover how expert shop fitting services can transform your retail space and improve customer experience."
 },
@@ -888,7 +888,7 @@ export const blogPosts = [
     <h3>5. Are shopfitting services suitable for small businesses?</h3>
     <p>Yes, shopfitting solutions can be customized for businesses of all sizes.</p>`,
 
-  "image": "/blog/shopfront11.avif",
+  "image": "/blog/shopfitting-kent.jpg",
   "metaTitle": "Shopfitting Services in Kent | Complete Commercial Fit Out Solutions",
   "metaDescription": "Discover professional shopfitting services in Kent and learn how expert fit-out solutions can transform your commercial premises."
 },
@@ -973,7 +973,7 @@ export const blogPosts = [
     <h3>5. Are sustainable materials available?</h3>
     <p>Yes, many contractors offer environmentally friendly solutions.</p>`,
 
-  "image": "/blog/doorshop.jpg",
+  "image": "/blog/retail-fitout-gravesend.jpg",
   "metaTitle": "Retail Fit Out Contractors Gravesend | Expert Retail Interior Solutions",
   "metaDescription": "Learn how retail fit out contractors in Gravesend help businesses create attractive and functional retail environments."
 },
@@ -1051,7 +1051,7 @@ export const blogPosts = [
     <h3>5. How much does a commercial fit out cost?</h3>
     <p>Costs depend on project size, materials, and complexity.</p>`,
 
-  "image": "/blog/shopfront1.jpg",
+  "image": "/blog/commercial-interior-gravesend.jpg",
   "metaTitle": "Commercial Interior Fit Out Gravesend | Professional Fit Out Solutions",
   "metaDescription": "Discover the benefits of commercial interior fit out services in Gravesend for offices, retail stores, and commercial premises."
 },
@@ -1130,7 +1130,7 @@ export const blogPosts = [
     <h3>5. Are office fit outs suitable for small businesses?</h3>
     <p>Yes, fit out solutions can be tailored for organizations of all sizes.</p>`,
 
-  "image": "/blog/auto.jpg",
+  "image": "/blog/office-fitout-gravesend.jpg",
   "metaTitle": "Office Fit Out Services Gravesend | Modern Workplace Design Solutions",
   "metaDescription": "Explore office fit out services in Gravesend and learn how modern workplace design can improve productivity and employee satisfaction."
 },
