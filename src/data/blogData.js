@@ -1142,8 +1142,6 @@ export const blogPosts = [
   "content":
     `<p>A <a href='https://kdshopfrontandshutters.com/' target='_blank'>garage door emergency repair</a> is often needed when your garage door suddenly stops opening, becomes stuck halfway, or poses a safety risk. Whether you own a residential property or a commercial garage in London, a malfunctioning garage door can disrupt your daily routine, compromise security, and even create hazardous situations. Knowing what to do in these situations can help reduce damage and restore your door quickly.</p>
 
-    <img src="/blog/garage-door-emergency-repair.jpg" alt="Garage Door Emergency Repair" style="width:100%; height:450px; object-fit:cover; margin-bottom: 20px;" />
-
     <h2>Why Garage Doors Suddenly Stop Working</h2>
     <p>Garage doors rely on several mechanical and electrical components working together. When one part fails, the entire system can stop functioning.</p>
 
@@ -1273,8 +1271,6 @@ export const blogPosts = [
   "title": "Industrial Roller Door Repairs: 7 Signs Your Commercial Door Needs Immediate Attention",
   "content":
     `<p><a href='https://kdshopfrontandshutters.com/' target='_blank'>Industrial roller door repairs</a> are essential for keeping warehouses, factories, retail units, and commercial buildings secure and operational. Industrial roller doors are designed for heavy daily use, but like any mechanical system, they experience wear and tear over time. Ignoring small problems can lead to expensive repairs, unexpected downtime, and serious safety risks.</p>
-
-    <img src="/blog/industrial-roller-door-repairs.jpg" alt="Industrial Roller Door Repairs" style="width:100%; height:450px; object-fit:cover; margin-bottom: 20px;" />
 
     <p>If you notice unusual noises, slow operation, or visible damage, it's important to arrange professional repairs before the issue becomes more serious. Below are seven warning signs that your industrial roller door needs immediate attention.</p>
 
@@ -1438,7 +1434,6 @@ export const blogPosts = [
 
     <p>Many business owners only arrange repairs after a fault occurs. However, preventative servicing identifies minor issues before they become expensive problems, helping you avoid unnecessary downtime and emergency repair costs.</p>
 
-    <img src="/blog/roller-shutter-servicing.jpg" alt="Roller Shutter Servicing" style="width:100%; height:450px; object-fit:cover; margin-bottom: 20px;" />
 
     <h2>Why Roller Shutter Servicing Is Important</h2>
     <p>Roller shutters are used daily and are constantly exposed to weather, dust, heavy usage, and general wear. Over time, components such as motors, springs, guides, bearings, and locking mechanisms begin to wear.</p>
@@ -1592,7 +1587,6 @@ export const blogPosts = [
 
     <p>Ignoring early warning signs can lead to expensive breakdowns, business disruption, and potential security risks. Understanding the most common problems and their solutions can help you take action before a minor issue becomes a major repair.</p>
 
-    <img src="/blog/electric-roller-shutter-repair.jpg" alt="Electric Roller Shutter Repair" style="width:100%; height:450px; object-fit:cover; margin-bottom: 20px;" />
 
     <h2>Why Electric Roller Shutters Fail</h2>
     <p>Electric roller shutters rely on a combination of mechanical and electrical components working together. Over time, these parts can wear out due to frequent use, weather exposure, or lack of maintenance.</p>
@@ -1761,7 +1755,6 @@ export const blogPosts = [
   "content":
     `<p>Selecting the right <a href='https://www.google.com/search?kgmid=/g/11x5hvs634&hl=en-IN&q=K+%26+D+Shopfront+and+Shutters&shem=epsd1,ltae,rimspwouoe&shndl=30&source=sh/x/loc/osrp/m5/1&kgs=3eb1085d05f41f51&utm_source=epsd1,ltae,rimspwouoe,sh/x/loc/osrp/m5/1' target='_blank'>roller shutter installation company</a> is one of the most important decisions for protecting your commercial property. Whether you own a retail shop, warehouse, office, or industrial unit, professionally installed roller shutters improve security, privacy, and day-to-day operations. However, not every installer offers the same level of expertise, materials, or customer support. Taking the time to evaluate your options helps ensure you receive a durable solution that suits your property's requirements and provides long-term value.</p>
 
-    <img src="/blog/30jul.png" alt="How to Choose the Right Roller Shutter Installation Company" style="width:100%; height:450px; object-fit:cover; margin-bottom: 20px;" />
 
     <h2>Look for Industry Experience</h2>
     <p>Experience is an important indicator of quality. A company with years of experience has likely completed a wide range of projects and understands the requirements of different commercial properties.</p>
