@@ -62,29 +62,6 @@ export default function App({ Component, pageProps }) {
             `,
           }}
         />
-
-        {/* ✅ JSON-LD Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "kdshopfrontandshutters",
-              alternateName: "kdshopfrontandshutters",
-              url: "https://kdshopfrontandshutters.com/",
-              logo: "",
-              contactPoint: {
-                "@type": "ContactPoint",
-                telephone: "+44 7407057984",
-                contactType: "customer service",
-                contactOption: "TollFree",
-                areaServed: "GB",
-                availableLanguage: "en",
-              },
-            }),
-          }}
-        />
       </Head>
 
       <WhatsAppModal />

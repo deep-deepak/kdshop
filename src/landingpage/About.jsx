@@ -50,10 +50,13 @@ const AboutSection = () => {
                 </Col>
                 <Col md={6} data-aos="fade-left">
                     <p className="mb-4" style={{ fontWeight: "bold" }}>
-                        At K&D Commercial, we specialize in high-quality aluminium windows, doors, curtain walling, shopfronts, and fire-rated solutions. With over a decade of experience, we continually innovate to provide cutting-edge designs that push boundaries and deliver exceptional results.
+                        K&D Shop Front and Shutters provides high-quality shopfront shutters UK businesses can rely on for security, durability and professional appearance. We design, supply and install bespoke shopfronts and shutter solutions for retail stores, restaurants, offices, commercial properties and other business premises.
+                    </p>
+                    <p className="mb-4">
+                        Our team provides complete support from initial design and measurements through to manufacturing and installation. With experience across commercial projects, we focus on practical, durable and visually appealing shop front shutters designed around the individual requirements of each property.
                     </p>
                     <p>
-                        As experts in commercial property enhancement, we handle everything from concept design to production and installation. Whether it’s schools, restaurants, banks, offices, or showrooms, we are committed to transforming your commercial space with precision and style, ensuring that every project meets and exceeds client expectations.
+                        For businesses looking for reliable shopfront shutter installation in the UK, our team can help you choose a suitable solution based on your property, security requirements and design preferences.
                     </p>
                 </Col>
             </Row>
